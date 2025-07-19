@@ -4,9 +4,9 @@ import * as imgs from "@/store/exportsImg";
 export const initialTerraseState: TerrasesInitialState = {
   terases: [
     {
-      imgs: [ imgs.mainPreviewSliderFst,imgs.mainPreviewSliderTrd,imgs.mainPreviewSliderScd, ],
+      imgs: [ imgs.sliderOne,imgs.sliderTwo,imgs.sliderThree,imgs.sliderFour,imgs.sliderFive, ],
       title: "terasesState.mainTerrase.title",
-      preview: [imgs.mainFst, imgs.preview],
+      preview: [imgs.mainPreviewSliderFst, imgs.mainPreviewSliderScd],
       descOne: [
         { text: "terasesState.mainTerrase.desc.0" },
         { text: "terasesState.mainTerrase.desc.1", isBold: true },
@@ -47,9 +47,9 @@ export const initialTerraseState: TerrasesInitialState = {
       ],
     },
     {
-      imgs: [imgs.lowerSlideScd, imgs.lowerSlideTrd, imgs.lowerSlideFst,   ],
+      imgs: [imgs.lowerSliderOne, imgs.lowerSliderTwo, imgs.lowerSliderThree, imgs.lowerPreviewSlide, imgs.lowerPreviewSlideTwo, ],
       title: "terasesState.lowerTerrase.title",
-      preview: [imgs.lowerFst, imgs.lowerTrd,],
+      preview: [imgs.lowerPreviewSlide, imgs.lowerPreviewSlideTwo,],
       descOne: [
         { text: "terasesState.lowerTerrase.desc.0" },
         { text: "terasesState.lowerTerrase.desc.1", isBold: true },

@@ -87,14 +87,13 @@ export { default as laungeTheatre } from "@/assets/ConferenceService/laungeTheat
 export { default as negotiationTableLaunge } from "@/assets/ConferenceService/negotiationTableLaunge.webp";
 
 //Terrase page
-export { default as preview } from "@/assets/Terrase/MainTerrase/previewSecond.webp";
-export { default as mainFst } from "@/assets/Terrase/MainTerrase/previewFst.webp";
-export { default as mainScd } from "@/assets/Terrase/MainTerrase/previewScd.webp";
-export { default as mainTrd } from "@/assets/Terrase/MainTerrase/previewTrd.webp";
-export { default as mainFth } from "@/assets/Terrase/MainTerrase/previewFth.webp";
-export { default as mainPreviewSliderFst } from "@/assets/Terrase/MainTerrase/previewSliderFst.webp";
-export { default as mainPreviewSliderScd } from "@/assets/Terrase/MainTerrase/previewSliderTwo.webp";
-export { default as mainPreviewSliderTrd } from "@/assets/Terrase/MainTerrase/previewSlider.webp";
+export { default as mainPreviewSliderFst } from "@/assets/Terrase/MainTerrase/IMG_5288.webp";
+export { default as mainPreviewSliderScd } from "@/assets/Terrase/MainTerrase/IMG_5295.webp";
+export { default as sliderOne } from "@/assets/Terrase/MainTerrase/fst.webp";
+export { default as sliderTwo } from "@/assets/Terrase/MainTerrase/scd.webp";
+export { default as sliderThree } from "@/assets/Terrase/MainTerrase/thrd.webp";
+export { default as sliderFour } from "@/assets/Terrase/MainTerrase/frd.webp";
+export { default as sliderFive } from "@/assets/Terrase/MainTerrase/fht.webp";
 
 export { default as upperFst } from "@/assets/Terrase/UpperTerrase/previewFhd.webp";
 export { default as upperScd } from "@/assets/Terrase/UpperTerrase/previewScd.webp";
@@ -105,13 +104,12 @@ export { default as previewSlider } from "@/assets/Terrase/UpperTerrase/previewS
 export { default as previewSliderTwo } from "@/assets/Terrase/UpperTerrase/previewSliderTwo.webp";
 export { default as previewSliderThree } from "@/assets/Terrase/UpperTerrase/previewSliderThree.webp";
 
-export { default as lowerFst } from "@/assets/Terrase/LowerTerrase/previewOne.webp";
-export { default as lowerTrd } from "@/assets/Terrase/LowerTerrase/previewThree.webp";
-export { default as lowerFstTs } from "@/assets/Terrase/LowerTerrase/previewOne.webp";
-export { default as lowerTrdTs } from "@/assets/Terrase/LowerTerrase/previewThree.webp";
-export { default as lowerSlideFst } from "@/assets/Terrase/LowerTerrase/sliderFst.webp";
-export { default as lowerSlideScd } from "@/assets/Terrase/LowerTerrase/sliderTwo.webp";
-export { default as lowerSlideTrd } from "@/assets/Terrase/LowerTerrase/sliderThr.webp";
+export { default as lowerSliderOne } from "@/assets/Terrase/LowerTerrase/fst.webp";
+export { default as lowerSliderTwo } from "@/assets/Terrase/LowerTerrase/scd.webp";
+export { default as lowerSliderThree } from "@/assets/Terrase/LowerTerrase/thrd.webp";
+export { default as lowerPreviewSlide } from "@/assets/Terrase/LowerTerrase/IMG_5305.webp";
+export { default as lowerPreviewSlideTwo } from "@/assets/Terrase/LowerTerrase/IMG_5306.webp";
+
 
 export { default as barImg } from "@/assets/Terrase/bar/bar.webp";
 export { default as wineImg } from "@/assets/Terrase/bar/wine.webp";
