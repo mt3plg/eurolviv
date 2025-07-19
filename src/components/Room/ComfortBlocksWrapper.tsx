@@ -153,6 +153,12 @@ export const ComfortsBlocksWrapper = ({
         
         if (isAtBottom || isNearBottom) {
           setLastComfortSection(true);
+          
+          if (isSafari) {
+            requestAnimationFrame(() => {
+              setLastComfortSection(true);
+            });
+          }
         }
       }
       
@@ -172,8 +178,11 @@ export const ComfortsBlocksWrapper = ({
         const overlapProgress = Math.min(1, Math.max(0, scrollTop / 300));
 
         const translateY = -overlapProgress * (block.offsetHeight * 0.6);
-        console.log(translateY)
-        if (translateY < -1000) {
+        
+        const isLastBlock = (room!.isLux && i === 2) || (!room!.isLux && i === 1);
+        const transformLimit = isSafari && isLastBlock ? -500 : -1000;
+        
+        if (translateY < transformLimit) {
           block.style.transform = `translateY(${translateY}px)`;
         }
 
@@ -188,8 +197,29 @@ export const ComfortsBlocksWrapper = ({
     container.addEventListener("scroll", handleScroll);
     handleScroll();
 
+    let resizeHandler: (() => void) | null = null;
+    if (isSafari) {
+      resizeHandler = () => {
+        setTimeout(() => {
+          if (container) {
+            const threshold = 50;
+            const isAtBottom = 
+              Math.abs((container.scrollHeight - container.scrollTop) - container.clientHeight) < threshold;
+            
+            if (isAtBottom) {
+                setLastComfortSection(true);
+            }
+          }
+        }, 100);
+      };
+      window.addEventListener('resize', resizeHandler);
+    }
+
     return () => {
       container.removeEventListener("scroll", handleScroll);
+      if (isSafari && resizeHandler) {
+        window.removeEventListener('resize', resizeHandler);
+      }
     };
   }, [setLastComfortSection, isSafari]);
 
@@ -287,6 +317,10 @@ export const ComfortsBlocksWrapper = ({
         style={{
           perspective: "800px",
           scrollBehavior: "smooth",
+          ...(isSafari && {
+            minHeight: "120%",
+            WebkitOverflowScrolling: "touch"
+          })
         }}
       >
         {room.isLux ? (
