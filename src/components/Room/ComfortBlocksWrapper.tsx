@@ -30,6 +30,7 @@ export const ComfortsBlocksWrapper = ({
   const wrapperRef = useRef<HTMLDivElement>(null);
   const hasScrolledToComponent = useRef(false);
   const isMobile = window.innerWidth < 768;
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
   useEffect(() => {
     setHasShownLastBlock(false);
@@ -108,6 +109,12 @@ export const ComfortsBlocksWrapper = ({
       clearTimeout(scrollTimeout.current);
     }
     
+    if (isSafari && value) {
+      setIsLastComfortBlockSection(true);
+      setHasShownLastBlock(true);
+      return;
+    }
+    
     scrollTimeout.current = setTimeout(() => {
       setIsLastComfortBlockSection(value);
       if (value) {
@@ -118,7 +125,7 @@ export const ComfortsBlocksWrapper = ({
         }
       }
     }, 150);
-  }, [setIsLastComfortBlockSection, hasShownLastBlock]);
+  }, [setIsLastComfortBlockSection, hasShownLastBlock, isSafari]);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -137,10 +144,14 @@ export const ComfortsBlocksWrapper = ({
       }
       
       else if (scrollTop > lastScrollTop.current) {
+        const threshold = isSafari ? 50 : 10;
         const isAtBottom = 
-          Math.abs((container.scrollHeight - container.scrollTop) - container.clientHeight) < 10;
+          Math.abs((container.scrollHeight - container.scrollTop) - container.clientHeight) < threshold;
         
-        if (isAtBottom) {
+        const isNearBottom = isSafari ? 
+          (scrollTop / (container.scrollHeight - container.clientHeight)) > 0.9 : false;
+        
+        if (isAtBottom || isNearBottom) {
           setLastComfortSection(true);
         }
       }
@@ -180,7 +191,7 @@ export const ComfortsBlocksWrapper = ({
     return () => {
       container.removeEventListener("scroll", handleScroll);
     };
-  }, [setLastComfortSection]);
+  }, [setLastComfortSection, isSafari]);
 
   useEffect(() => {
     if (!lastBlockRef.current) return;
@@ -389,6 +400,10 @@ export const ComfortsBlocksWrapper = ({
               />
             </div>
           </>
+        )}
+        
+        {isSafari && (
+          <div style={{ height: '150px', minHeight: '150px' }} />
         )}
       </div>
     </div>
