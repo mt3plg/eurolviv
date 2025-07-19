@@ -39,7 +39,7 @@ export const HeaderSocial = ({ styles }: HeaderSocialToProps) => {
       >
         <svg
           viewBox="0 0 24 26"
-          className="2xl:p-[0.1vw] xl:p-[0.0vw] lg:p-[0.0vw] w-[24px] h-[24px]"
+          className="2xl:p-[0.1vw] xl:p-[0.0vw] lg:p-[0.0vw] 2xl:w-[5vw] 2xl:h-[1.5vw] xl:w-[5vw] xl:h-[1.5vw] lg:w-[5vw] lg:h-[1.5vw]"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
         >
