@@ -35,7 +35,7 @@ export const GuestsSelect: React.FC<GuestsSelectProps> = ({
             <select
               {...field}
               className={cn(
-                "w-full 2xl:pb-[10px] xl:pb-[8px] pb-[7px] xl:text-[1.09vw] lg:text-[14px] text-white border-b uppercase border-[#969696] cursor-pointer text-[2.67vw] 2xl:text-[0.83vw]",
+                "custom-select w-full 2xl:pb-[10px] xl:pb-[8px] pb-[7px] xl:text-[1.09vw] lg:text-[14px] text-white border-b uppercase border-[#969696] cursor-pointer text-[2.67vw] 2xl:text-[0.83vw]",
                 errors[fieldName] && "border-red-500 border"
               )}
             >
