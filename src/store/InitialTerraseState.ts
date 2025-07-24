@@ -49,7 +49,7 @@ export const initialTerraseState: TerrasesInitialState = {
     {
       imgs: [imgs.lowerSliderOne, imgs.lowerSliderTwo, imgs.lowerSliderThree, imgs.lowerPreviewSlide, imgs.lowerPreviewSlideTwo, ],
       title: "terasesState.lowerTerrase.title",
-      preview: [imgs.lowerPreviewSlide, imgs.lowerPreviewSlideTwo,],
+      preview: [imgs.lowerPreviewSlide, imgs.lowerSliderOne,],
       descOne: [
         { text: "terasesState.lowerTerrase.desc.0" },
         { text: "terasesState.lowerTerrase.desc.1", isBold: true },
