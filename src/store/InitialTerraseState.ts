@@ -47,7 +47,7 @@ export const initialTerraseState: TerrasesInitialState = {
       ],
     },
     {
-      imgs: [imgs.lowerSliderOne, imgs.lowerSliderTwo, imgs.lowerSliderThree, imgs.lowerPreviewSlide, imgs.lowerPreviewSlideTwo, ],
+      imgs: [ imgs.lowerSliderTwo,imgs.lowerSliderOne, imgs.lowerSliderThree, imgs.lowerPreviewSlide, imgs.lowerPreviewSlideTwo, ],
       title: "terasesState.lowerTerrase.title",
       preview: [imgs.lowerPreviewSlide, imgs.lowerSliderOne,],
       descOne: [
