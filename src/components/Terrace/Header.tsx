@@ -11,7 +11,7 @@ export const TerraseHeader = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent to-[#25252600] z-[-9]"></div>
       <div className="absolute inset-0 bg-[#25252659] z-[-9]"></div>
       <div ref={ref} className="absolute inset-0 w-full  z-[-10]">
-       <VideoPlayer src="/terrace/header.m3u8" />
+       <VideoPlayer src="/terrace-assets/header.m3u8"  />
       </div>
     
 
