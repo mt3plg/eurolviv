@@ -21,6 +21,7 @@ export const VideoPlayer = ({src, autoplay = true}: {src: string; autoplay?: boo
       responsive: true,
       fluid: true,
       preload: 'metadata',
+      playsinline: true,
       sources: [
         {
           src,

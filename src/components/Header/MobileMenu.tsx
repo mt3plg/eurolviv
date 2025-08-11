@@ -3,7 +3,8 @@ import cn from "classnames";
 import burgerMenu from "@/assets/icons/burgerMenu.svg";
 import { Link } from "react-router-dom";
 import { ChangeLangButton } from "@/components/Header/ChangeLangButton";
-
+import { links } from "@/Constants/Links";
+  
 type MobileMenuButtonProps = {
   toggleMenu: () => void;
   scrolled: boolean;
@@ -67,7 +68,7 @@ export const MobileBookingButton = ({
         />
       ) : (
         <Link
-          to="/booking"
+          to={pathname === "/terrace" || pathname === "/restaurant" ? links.bookTable : "/booking"}
           className={cn(
             ` bg-[#a33d2e] text-white px-2 py-1 lg:hidden uppercase rounded-3xl flex items-center justify-center hover:bg-[#922b1f] self-center
           font-cofo-medium text-[10px]  w-[107px] text-center h-[30px]`,

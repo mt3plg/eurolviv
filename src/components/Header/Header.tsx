@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { RiArrowDownSLine } from "react-icons/ri";
 import cn from "classnames";
 import { createPortal } from "react-dom";
+import { links } from "@/Constants/Links";
 
 interface HeaderProps {
   menuOpen: boolean;
@@ -141,7 +142,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
               <HeaderSocial styles={styles} />
 
               <Link
-                to={"/booking"}
+                to={pathname === "/terrace" || pathname === "/restaurant" ? links.bookTable : "/booking"}
                 className={cn(
                   `uppercase bg-[#8C331B] 2xl:mt-[1.3vw] xl:mt-[0.94vw] xl:text-[0.94vw]  text-white px-3 text-center items-center justify-center
                    py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium lg:text-[0.98vw] text-[12px] 2xl:text-[0.73vw] 2xl:w-[9.95vw] 2xl:h-[2.03vw]
@@ -153,7 +154,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                   }
                 )}
               >
-                {t("header.book")
+                {pathname === "/terrace" || pathname === "/restaurant" ? t("buttons.bookTable") : t("buttons.book")
                   .split(" ")
                   .map((word, index) => (
                     <span
