@@ -17,6 +17,7 @@ export const VideoPlayer = ({src, autoplay = true}: {src: string; autoplay?: boo
     playerRef.current = videojs(videoEl, {
       autoplay,
       muted: true,
+      loop: true,
       controls: false,
       responsive: true,
       fluid: true,
