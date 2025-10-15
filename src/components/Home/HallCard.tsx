@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { useTranslation } from "react-i18next";
 import { square, guest } from "@/store/exportsIcons";
@@ -15,13 +14,14 @@ type HallCardProps = {
   };
   index: number;
   isEng: boolean;
+  setIsBannerVisible: (isBannerVisible: boolean) => void;
 };
 
-export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
+export const HallCard = ({ hall, index, isEng, setIsBannerVisible }: HallCardProps) => {
   const { t } = useTranslation();
   const [onHover, setOnHover] = useState<number | null>(null);
 
-  const anchorId = ["small-hall", "big-hall", "launge-hall"];
+  // const anchorId = ["small-hall", "big-hall", "launge-hall"];
 
   return (
     <div
@@ -86,8 +86,9 @@ export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
               }
             )}
           >
-            <Link
-              to={`/conference-service#${anchorId[index]}`}
+            <button
+              // to={`/conference-service#${anchorId[index]}`}
+              onClick={() => setIsBannerVisible(true)}
               className={`w-fit xl:py-[10px] font-cofo-medium flex 
                 justify-center items-center px-5 py-2 text-[#8c331b]
                 border-[#8C331B] border rounded-full uppercase 2xl:w-[8.72vw] 2xl:h-[2.4vw] 2xl:text-[.84vw]
@@ -96,7 +97,7 @@ export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
                 hover:shadow-lg hover:scale-105 hover:-translate-y-1`}
             >
               {t("buttons.details")}
-            </Link>
+            </button>
           </div>
         }
       </div>
