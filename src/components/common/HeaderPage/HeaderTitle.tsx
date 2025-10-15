@@ -21,7 +21,7 @@ export const HeaderTitle: React.FC<HeaderTitleProps> = ({
     return (
       <h1
         className={
-          `${baseClasses}  2xl:text-[10.31vw] xl:text-[11.72vw] lg:text-[100px] md:text-[80px] flex flex-col text-[48px]  xl:leading-[154.83px] leading-[80%] tracking-[-0.1em] pt-[12px] gap-0 `
+          `${baseClasses} 2xl:text-[10.31vw] xl:text-[11.72vw] lg:text-[100px] md:text-[80px] flex flex-col text-[48px]  xl:leading-[154.83px] leading-[80%] 2xl:leading-[80%] tracking-[-0.1em] pt-[12px] gap-0 `
         }
       >
         <span className="block ">{titleParts[0]}-</span>

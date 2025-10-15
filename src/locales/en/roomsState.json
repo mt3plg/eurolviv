@@ -1,10 +1,10 @@
 {
     "roomsState":{
         "standartSingle":{
-            "title":"STANDART single",
+            "title":"STANDARD single",
             "desc":"The perfect choice for a business trip",
             "header":{
-                "title":"STANDART ",
+                "title":"STANDARD ",
                 "size":"single",
                 "description":"The perfect choice for a business trip",
                 "view":"courtyard view"
@@ -50,10 +50,10 @@
             ]
         },
         "standartBigbed":{
-            "title":"STANDART DOUBLE",
+            "title":"STANDARD DOUBLE",
             "desc":"Comfort and convenience for your stay",
             "header":{
-                "title":"STANDART ",
+                "title":"STANDARD ",
                 "size":"DOUBLE",
                 "description":"Comfort and convenience for your stay",
                 "view":"courtyard view"
@@ -90,7 +90,7 @@
             },
             "suggestion":[
                 {
-                    "title":"STANDART ",
+                    "title":"STANDARD ",
                     "size":"SINGLE",
                     "desc":"The perfect choice for a business trip"
                 },
@@ -102,10 +102,10 @@
             ]
         },
         "standartTwoBed":{
-            "title":"STANDART  TWIN",
+            "title":"STANDARD  TWIN",
             "desc":"Quiet and comfort in the city’s business core",
             "header":{
-                    "title":"STANDART ",
+                    "title":"STANDARD ",
                     "size":"TWIN",
                     "description":"Quiet and comfort in the city’s business core",
                     "view":"courtyard view"
@@ -147,17 +147,17 @@
                         "desc":"Comfort and convenience for your stay"
                     },
                     {
-                        "title":"STANDART TWIN ",
+                        "title":"STANDARD TWIN ",
                         "size":"with balcony",
                         "desc":"Experience the harmony between style and comfort"
                     }
                 ]
             },
             "standartBigBedBalcony": {
-                "title": "STANDART double with balcony",
+                "title": "STANDARD double with balcony",
                 "desc": "Urban energy outside, peaceful comfort inside",
                 "header": {
-                  "title": "STANDART",
+                  "title": "STANDARD",
                   "size": "double with balcony",
                   "description": "Urban energy outside, peaceful comfort inside",
                   "view": "street view"
@@ -257,11 +257,11 @@
                 ]
               },
               "standartTwoBedBalcony": {
-                "type": "standart-two-bed-balcony",
-                "title": "STANDART TWIN with balcony",
+                "type": "STANDARD-two-bed-balcony",
+                "title": "STANDARD TWIN with balcony",
                 "desc": "Experience the harmony between style and comfort",
                 "header": {
-                  "title": "STANDART TWIN",
+                  "title": "STANDARD TWIN",
                   "size": "with balcony",
                   "description": "Experience the harmony between style and comfort",
                   "view": "street view"

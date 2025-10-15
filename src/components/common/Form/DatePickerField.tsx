@@ -55,7 +55,7 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
             <div className="relative w-full controller-wrapper">
               <DatePicker
                 ref={datePickerRef}
-                disabledKeyboardNavigation={false}
+                disabledKeyboardNavigation={true}
                 onKeyDown={(e) => {
                   e.preventDefault();
                 }}

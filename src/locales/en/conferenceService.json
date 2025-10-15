@@ -1,32 +1,40 @@
 {
-    "conferenceService":{
-    "header":{
-        "title":"CONFERENCE SERVICES",
-        "desc":"Business meetings that spark new possibilities"
-    }    ,
-    "about":{
-        "area":"Area",
-        "roomFloor":"Floor",
-        "capacity":"Capacity",
-        "contact":"contacts"
-    },
-    "equipment":{
-        "title":["included", "equipment:"],
-        "price":"Rates:",
-        "day":"full day",
-        "hour":"hourly"
-    },
-    "conferenceMenu":{
-        "title":"Add flavor to your event", 
-        "desc":"EVENT CATERING MENU",
-        "menu":{
-            "title":"LUNCHES AND DINNERS",
-            "title1":"BUFFET",
-            "title2":"COFFEE BREAKS"
+    "conferenceService": {
+        "header": {
+            "title": "CONFERENCE SERVICES",
+            "desc": "Business meetings that spark new possibilities"
+        },
+        "about": {
+            "area": "Area",
+            "roomFloor": "Floor",
+            "capacity": "Capacity",
+            "contact": "contacts"
+        },
+        "equipment": {
+            "title": [
+                "included",
+                "equipment:"
+            ],
+            "price": "Rates:",
+            "day": "full day",
+            "hour": "hourly"
+        },
+        "conferenceMenu": {
+            "title": "Add flavor to your event",
+            "desc": "EVENT CATERING MENU",
+            "menu": {
+                "title": "LUNCHES AND DINNERS",
+                "title1": "BUFFET",
+                "title2": "COFFEE BREAKS"
+            }
+        },
+        "updateNotificationBanner": {
+            "title": "Section under update",
+            "desc": ["We are currently updating information about our conference rooms.","Please contact our reservation managers — they will be happy to provide you with all the","up-to-date information regarding event facilities at our hotel."],
+            "contact": "Contacts",
+            "phone1": "+ 38 (093) 242 31 60",
+            "phone2": "+ 38 (093) 348 31 12",
+            "email": "info@eurohotel.lviv.ua"
         }
-    
-        
-    }
-    
     }
 }
