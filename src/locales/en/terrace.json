@@ -1,12 +1,12 @@
 {
     "terrase":{
         "header":{
-            "title":"Ruff",
+            "title":"Roof",
             "title2":"Terrace ",
-            "desc":"The RUFF Terraces are a three-level rooftop space at Eurohotel"
+            "desc":"The ROOF Terraces are a three-level rooftop space at Eurohotel"
         },
         "bar":{
-            "title":"ruff bar",
+            "title":"Roof bar",
             "title2":"Drinks",
             "desc":["Cocktails that wow! Top-","notch ingredients and perfectly balanced flavors."],
             "alcoholCard":"Alcohol menu",
@@ -16,11 +16,11 @@
         "dishes":{
     
           "heading":"Menu",
-            "title":"RUFF Dishes",
+            "title":"ROOF Dishes",
             "desc":"Our menu dishes out a bold, unexpected twist on classics that'll thrill your taste buds!"
           },
           "celebration":{
-            "heading":"Ruff",
+            "heading":"Roof",
             "title":"Celebrations",
             "title2":"",
             "desc":"An excellent spot to toast achievements in the warmth of good company!"

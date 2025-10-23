@@ -3,7 +3,7 @@ import { IoClose } from "react-icons/io5";
 
 interface UpdateNotificationBannerProps {
   isVisible: boolean;
-  onClose: () => void;
+  onClose?: () => void;
 }
 
 export const UpdateNotificationBanner: React.FC<UpdateNotificationBannerProps> = ({
@@ -17,13 +17,16 @@ export const UpdateNotificationBanner: React.FC<UpdateNotificationBannerProps> =
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
       <div className="bg-[#F5F1ED] rounded-lg shadow-2xl max-w-4xl w-full relative p-8 md:p-10">
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-[#8B5A3C] hover:text-[#6B4A2C] transition-colors"
-          aria-label="Закрити"
-        >
-          <IoClose className="w-8 h-8" />
-        </button>
+        {onClose && (
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 text-[#8B5A3C] hover:text-[#6B4A2C] transition-colors"
+            aria-label="Закрити"
+          >
+            <IoClose className="w-8 h-8" />
+          </button>
+        )}
+
 
                 <div className=" space-y-6">
                     <h2 className="text-2xl md:text-3xl font-bold text-[#8B5A3C]">

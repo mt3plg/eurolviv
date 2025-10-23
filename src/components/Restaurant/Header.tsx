@@ -23,7 +23,7 @@ export const RestaurantHeader = () => {
         </h4>
 
         <h1 className="uppercase xl:text-[357px] lg:text-[238px] md:text-[208px]  text-[96px]  font-normal text-[#FFFFFF] xl:leading-[80%] md:leading-[60%] leading-[70%] tracking-[-0.1em] text-center underline decoration-transparent">
-          ruff
+        ROOF
         </h1>
 
         <h4 className="text-[14px] xl:text-[18px] lg:text-[16px] leading-[104%]  w-fit text-white  text-center uppercase md:mt-7  xl:mt-4 mt-3">
