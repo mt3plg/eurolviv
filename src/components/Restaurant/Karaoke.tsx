@@ -19,7 +19,7 @@ export const Karaoke = () => {
         >
           <div className="flex items-center md:items-start  flex-col justify-center  text-center md:text-start 2xl:pt-[42px]">
             <p className="font-blessed xl:font-extrabold  text-[16px] 2xl:text-[36px] xl:text-[26px]  lg:w-[350px] lg:text-[26px] lg:leading-[25.2px]  xl:inline xl:w-[400px]">
-              Ruff
+            ROOF
             </p>
             <h1 className="uppercase 2xl:text-[5.208vw]  xl:text-[64px] text-[#252526] lg:text-[44px] md:text-[32px] text-[64px] leading-[81%] 2xl:max-w-[605px]  lg:max-w-[350px] xl:max-w-[400px] md:max-w-[250px] max-w-[299px] tracking-[-0.07em] pt-1.5 xl:pt-1.5 ">
               {t("restaurant.karaoke.title")}

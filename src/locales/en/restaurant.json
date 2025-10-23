@@ -16,21 +16,21 @@
             "desc":{
 
 
-                "first":["Perched on the ", "8th floor ", " of Eurohotel, RUFF is a panoramic restaurant where Lviv unfolds in all its timeless beauty. The historic rooftops form an amazing mosaic, and the sky becomes part of the ambiance."],
-                "second":["With seating for 115 guests ", "RUFF offers a menu that celebrates the finest ", "European and Ukrainian cuisine— ", "honoring classic flavors while embracing bold, contemporary interpretations. Every morning, as the city awakens, we welcome you with exceptional breakfasts paired with stunning skyline views."],
+                "first":["Perched on the ", "8th floor ", " of Eurohotel, ROOF is a panoramic restaurant where Lviv unfolds in all its timeless beauty. The historic rooftops form an amazing mosaic, and the sky becomes part of the ambiance."],
+                "second":["With seating for 115 guests ", "ROOF offers a menu that celebrates the finest ", "European and Ukrainian cuisine— ", "honoring classic flavors while embracing bold, contemporary interpretations. Every morning, as the city awakens, we welcome you with exceptional breakfasts paired with stunning skyline views."],
                 "third":["For our youngest guests, we’ve created a special kids’ menu. ","For business meetings, balanced lunch options. And for true gourmets—seasonal culinary delights."],
                 "fourh":["Our signature cocktails ","are inspired by Lviv’s unique spirit, while"," exquisite dishes ","taste even better against the backdrop of this stunning panorama "]
             }
         },
         "karaoke":{
             "title":"Karaoke Lounge",
-            "desc":["RUFF Karaoke Lounge ", "lets you ride the wave of music and takes you even higher. With top-notch equipment and a vast song collection, it’s the perfect spot for aspiring stars, while the soothing aroma of hookahs adds to the laid-back vibe.", "The panoramic windows offer the best view in the city, setting the stage for musical experiments—your voice harmonizes with the breathtaking views of evening Lviv."],
+            "desc":["ROOF Karaoke Lounge ", "lets you ride the wave of music and takes you even higher. With top-notch equipment and a vast song collection, it’s the perfect spot for aspiring stars, while the soothing aroma of hookahs adds to the laid-back vibe.", "The panoramic windows offer the best view in the city, setting the stage for musical experiments—your voice harmonizes with the breathtaking views of evening Lviv."],
             "karaokeTime":"Fri-Sun from 8:00 PM"
 
         },
         "celebration":{
             "title":"Celebrations & Events",
-            "desc":["At RUFF, every event finds its perfect sound. Whether it’s a wedding, anniversary, corporate gathering, or christening, the restaurant’s space can be easily transformed to suit your needs, all while keeping its signature— the panoramic view of Old Lviv just outside the window.", "The main banquet hall on the 8th floor accommodates up to 80 guests, while the stylish karaoke lounge fits up to 40. We’ll take care of every detail to make sure your celebration is flawless."]
+            "desc":["At ROOF, every event finds its perfect sound. Whether it’s a wedding, anniversary, corporate gathering, or christening, the restaurant’s space can be easily transformed to suit your needs, all while keeping its signature— the panoramic view of Old Lviv just outside the window.", "The main banquet hall on the 8th floor accommodates up to 80 guests, while the stylish karaoke lounge fits up to 40. We’ll take care of every detail to make sure your celebration is flawless."]
         },
         "reviews":{
             "title":"відгуки",

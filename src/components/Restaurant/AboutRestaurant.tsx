@@ -30,7 +30,7 @@ export const AboutRestaurant = () => {
                   xl:text-[6.719vw] xl:pt-2
                 `}
               >
-                ruff
+                ROOF
               </h1>
               <span
                 className={`2xl:text-[3.33vw] lg:tracking-[-0.07em] justify-center pt-[4px] lg:pt-0 

@@ -99,7 +99,7 @@ export const Footer = () => {
                           className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
                         >
                           {isEng
-                            ? "ruff " + t("home.roofService.restaurant.title")
+                            ? "roof " + t("home.roofService.restaurant.title")
                             : t("footer.restaurant")}
                         </Link>
                       </li>
@@ -109,7 +109,7 @@ export const Footer = () => {
                           className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
                         >
                           {isEng
-                            ? "ruff " + t("terrase.header.title2")
+                            ? "roof " + t("terrase.header.title2")
                             : t("footer.terrace")}
                         </Link>
                       </li>

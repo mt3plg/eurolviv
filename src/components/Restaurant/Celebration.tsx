@@ -14,7 +14,7 @@ export const Celebration = () => {
 
         <div className="2xl:h-[32.08vw] xl:h-[540px]  flex border-[#B3B3B3] md:border-x flex-col items-center lg:justify-end justify-end  lg:oy-0 py-[65px_57px] text-center lg:pb-[27px]">
           <span className="font-blessed  block text-center leading-[70%] text-[16px] xl:text-[36px]  xl:inline xl:pb-[22px] pb-[7px]">
-            Ruff
+          ROOF
           </span>
           <h1
             className={`uppercase lg:w-fit w-[217px] md:w-[317px] 2xl:text-[5.21vw] lg:text-[54px] md:text-[44px] text-[#242425]   md:leading-[81%] leading-[94%]  z-1 text-[32px] tracking-[-0.06em] lg:whitespace-nowrap  
