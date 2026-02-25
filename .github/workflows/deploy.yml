@@ -1,0 +1,98 @@
+name: Manual Deploy via rsync
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: self-hosted
+
+    env:
+      # Base path on remote host (change if needed)
+      REMOTE_BASE: /home/eurohot/eurohotel.lviv.ua
+      RELEASES_DIR: /home/eurohot/eurohotel.lviv.ua/releases
+      CURRENT_LINK: /home/eurohot/eurohotel.lviv.ua/www
+      # Make timestamps in Europe/Kyiv
+      TZ: Europe/Kyiv
+
+    steps:
+    - name: Clean workspace
+      run: |
+        echo "Cleaning up workspace on runner..."
+        sudo rm -rf ./* || true
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build project
+      run: npm run build
+
+    - name: Create .htaccess for SPA routing
+      run: |
+        cat <<EOF > dist/.htaccess
+        <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteBase /
+        RewriteRule ^index\.html$ - [L]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule . /index.html [L]
+        </IfModule>
+        EOF
+
+    - name: Prepare SSH
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -p "${{ secrets.DEPLOY_PORT }}" -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+
+
+    - name: Deploy (timestamped release + symlink switch)
+      env:
+        SSH_USER: ${{ secrets.DEPLOY_USER }}
+        SSH_HOST: ${{ secrets.DEPLOY_HOST }}
+        SSH_PORT: ${{ secrets.DEPLOY_PORT }}
+      run: |
+        set -euo pipefail
+
+        # 1) Compose release name locally so we reuse it across steps
+        RELEASE_NAME="www_$(date +'%d_%m_%Y_%H%M%S')"
+        DEST_DIR="$RELEASES_DIR/$RELEASE_NAME"
+
+        echo "Release name: $RELEASE_NAME"
+        echo "Destination: $DEST_DIR"
+
+        # 2) Create releases dir + destination dir on remote
+        ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "mkdir -p '$RELEASES_DIR' && mkdir -p '$DEST_DIR'"
+
+        # 3) Rsync built assets to the new release dir
+        rsync -avz --delete \
+        -e "ssh -p $SSH_PORT" \
+        ./dist/ \
+        "$SSH_USER@$SSH_HOST:$DEST_DIR/"
+
+        # 4) Atomic symlink switch (create tmp link then rename over)
+        ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "
+        set -e
+        ln -sfn '$DEST_DIR' '${CURRENT_LINK}.tmp' &&
+        mv -Tf '${CURRENT_LINK}.tmp' '${CURRENT_LINK}'
+        "
+
+        # 5) Optional: keep only last 5 releases, delete older
+        ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "
+        cd '$RELEASES_DIR' && \
+        ls -1tr | grep '^www_' | head -n -5 | xargs -r -I{} rm -rf '{}'
+        "
+
+        echo "Deployed $RELEASE_NAME and updated ${CURRENT_LINK}"
