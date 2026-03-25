@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { usePagesInfoStore } from "@/store/usePagesInfoStore";
 import { Link } from "react-router-dom";
 import cn from "classnames";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 export const Rewies = () => {
   const sliderRef = useRef<Slider | null>(null);
   const { t, i18n } = useTranslation();
@@ -39,7 +40,7 @@ export const Rewies = () => {
               </p>
 
               <Link
-                to={"/booking"}
+                to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
                 className="uppercase text-[#A47762] lg:text-[14px] lg:w-[234px]  text-center  mt-[20px] lg:mt-0 xl:w-[234px]! xl:text-[1.094vw] 2xl:text-[0.833vw]
                 font-cofo-medium whitespace-nowrap bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] 
                 w-[45.867vw]   xl:py-[10px] py-[10px]  rounded-full  hover:cursor-pointer text-[3.2vw] "

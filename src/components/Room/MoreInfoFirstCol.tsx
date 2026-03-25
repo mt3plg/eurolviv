@@ -2,6 +2,7 @@ import { parking } from "@/store/exportsIcons";
 import { coffeeRoom } from "@/store/exportsImg";
 import { useTranslation } from "react-i18next";
 import { BookLink } from "@/components/Buttons/BookLink";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 export const MoreInfoFirstCol = ({
   isShowOtherInfo,
@@ -10,7 +11,7 @@ export const MoreInfoFirstCol = ({
   isShowOtherInfo: boolean;
   amenities: { src: string; text: string }[];
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <div className="flex flex-col lg:py-20 2xl:py-[4.17vw] xl:py-[6.25vw] pt-[54px] pb-[28px] md:py-10 2xl:px-[1.09vw_0.89vw] xl:px-[14px_10px] lg:px-[1.09vw_0.78vw]  md:px-[10px_8px] h-full">
       {isShowOtherInfo ? (
@@ -63,7 +64,7 @@ export const MoreInfoFirstCol = ({
       </p>
       {isShowOtherInfo && (
         <BookLink
-          to="/booking"
+          to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
           className=" 
         bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors  text-center   xl:mt-auto
         lg:mt-9

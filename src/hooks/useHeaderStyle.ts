@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
+import { stripLocalePrefix } from "@/utils/localeRouting";
 
 import ruffLogo from "@/assets/ruffLogo.svg";
 import defaultLogo from "@/assets/logo.svg";
@@ -7,6 +8,7 @@ import terraseLogo from "@/assets/terraseLogo.svg";
 
 const useNavbarStyles = () => {
   const location = useLocation();
+  const normalizedPathname = stripLocalePrefix(location.pathname);
   const [scrolled, setScrolled] = useState(false);
   const [isShowRooms, setIsShowRooms] = useState(false);
   
@@ -21,9 +23,9 @@ const useNavbarStyles = () => {
   }, []);
 
   function isActiveLink(path: string) {
-    const isActive = location.pathname === path;
+    const isActive = normalizedPathname === path;
 
-    if (location.pathname === "/contacts") {
+    if (normalizedPathname === "/contacts") {
       return isActive
         ? "text-[#252526] "
         : "text-[#252526]/62 hover:text-[#252526]";
@@ -49,10 +51,10 @@ const useNavbarStyles = () => {
       : "bg-white text-[#8C331B]";
 
     if (
-      location.pathname === "/restaurant" ||
-      location.pathname === "/terrace"
+      normalizedPathname === "/restaurant" ||
+      normalizedPathname === "/terrace"
     ) {
-      if (location.pathname === "/terrace") {
+      if (normalizedPathname === "/terrace") {
         logo = terraseLogo;
       } else {
         logo = ruffLogo;
@@ -60,14 +62,14 @@ const useNavbarStyles = () => {
       styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
       iconLogoStyle = scrolled ? "" : "invert";
       rightMenu = scrolled ? "text-[#252526]/62" : "text-[#FFFFFF]";
-    } else if (location.pathname === "/contacts") {
+    } else if (normalizedPathname === "/contacts") {
       styles = scrolled ? "bg-[#252526] text-white" : "bg-[#8C331B] text-white";
       iconLogoStyle = "filter invert";
       rightMenu = scrolled ? "text-[#252526]/62" : "text-[#252526]";
     }
 
     return { styles, iconLogoStyle, rightMenu, logo };
-  }, [location.pathname, scrolled]);
+  }, [normalizedPathname, scrolled]);
 
   return {
     styles,
@@ -78,7 +80,7 @@ const useNavbarStyles = () => {
     isShowRooms,
     setIsShowRooms,
     isActiveLink,
-    pathname: location.pathname,
+    pathname: normalizedPathname,
   };
 };
 

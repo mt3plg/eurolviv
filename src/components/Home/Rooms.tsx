@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useRoomStore } from "@/store/useRoomsStore";
 import cn from "classnames";
 import { useCustomWidth } from "@/hooks/useCustomWidth";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 export const RoomsHome = () => {
   const sliderRef = useRef<Slider | null>(null);
@@ -86,7 +87,7 @@ export const RoomsHome = () => {
                 </p>
                 <div className="flex justify-center items-center">
                   <Link
-                    to="/rooms"
+                    to={buildLocalizedPath("/rooms", i18n.language === "en" ? "en" : "uk")}
                     className={cn(
                       `uppercase text-center text-[#242425] font-cofo-medium hover:bg-black hover:text-[#EDE8E5]
                        bg-[#EDE8E5] whitespace-nowrap 

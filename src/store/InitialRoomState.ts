@@ -1433,7 +1433,7 @@ export const initialRoomsState: RoomsState = {
       title: "roomsState.standartTwoBedBalcony.title",
     },
     {
-      type: "standart-big-bed-and-balcony",
+      type: "standart-big-bed-balcony",
       area: 18,
       guests: "2",
       src: imgs.standartBigBedAndBalconyPreview,

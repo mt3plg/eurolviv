@@ -11,10 +11,11 @@ import { FormData } from "@/types/headerTypes";
 import { formSchema } from "@/schemas/bookRoom";
 import { useTranslation } from "react-i18next";
 import { guests, children } from "@/Constants/HeaderBookingForm";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 export const HeaderBookingForm = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const {
     control,
     handleSubmit,
@@ -31,7 +32,7 @@ export const HeaderBookingForm = () => {
 
   
   const onSubmit = (data: FormData) => {
-    navigate("/booking", {
+    navigate(buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk"), {
       state: {
         checkIn: data.checkIn,
         checkOut: data.checkOut,

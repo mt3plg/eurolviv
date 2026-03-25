@@ -5,8 +5,9 @@ import { useTranslation } from "react-i18next";
 import { ConferenceServiceSlider } from "@/components/Home/ConferenceServiceSlider";
 import cn from "classnames";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 export const ConferenceService = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { halls } = useRoomStore();
   const isEng = useIsEnglish();
   const hallsForList = [halls[1], halls[0], halls[2]]
@@ -53,7 +54,7 @@ export const ConferenceService = () => {
             </p>
             <div className=" text-center flex items-center justify-center xl:mb-[48px] lg:mb-[32px] md:mb-[24px]">
               <Link
-                to="/conference-service"
+                to={buildLocalizedPath("/conference-service", i18n.language === "en" ? "en" : "uk")}
                 className={`  bg-[#8c331b] flex items-center  w-[160px] h-[40px] justify-center text-center text-[12px] xl:w-[165px] 2xl:w-[10.42vw] 2xl:h-[2.4vw] 2xl:text-[.73vw] xl:text-[14px] hover:bg-[white] text-white hover:text-[#8C331B] border-[#8C331B] border rounded-full uppercase z-1 font-cofo-medium ${isEng ? "lg:w-[165px]" : ""
                   }`}
               >

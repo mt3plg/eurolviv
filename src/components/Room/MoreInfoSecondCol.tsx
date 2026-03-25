@@ -4,6 +4,7 @@ import { dogRoom } from "@/store/exportsImg";
 import { BookLink } from "@/components/Buttons/BookLink";
 import cn from "classnames";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 export const MoreInfoSecondCol = ({
   availableService,
   isShowOtherInfo,
@@ -11,7 +12,7 @@ export const MoreInfoSecondCol = ({
   availableService: { src: string; text: string }[];
   isShowOtherInfo: boolean;
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isEng = useIsEnglish();
   return (
     <div
@@ -89,7 +90,7 @@ export const MoreInfoSecondCol = ({
 
         {isShowOtherInfo && (
           <BookLink
-            to="/booking"
+            to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
             className=" 
         bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors   xl:mt-[3.13vw] lg:w-[204px] text-center
         lg:mt-9
@@ -118,7 +119,7 @@ export const MoreInfoSecondCol = ({
           </p>
           {!isShowOtherInfo && (
             <BookLink
-              to="/booking"
+              to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
               className={cn(` 
         bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors xl:text-[0.94vw]
          2xl:text-[0.73vw] lg:px-0 xl:w-[15.28vw] lg:w-[204px] 2xl:w-[10.63vw] 2xl:h-[2.29vw]

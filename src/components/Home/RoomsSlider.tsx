@@ -11,6 +11,7 @@ import { useCustomWidth } from "@/hooks/useCustomWidth";
 import { guestWhite } from "@/store/exportsIcons";
 import { squareWhite } from "@/store/exportsIcons";
 import { Link } from "react-router-dom";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 type Room = {
   title: string;
@@ -27,7 +28,7 @@ type RoomsSliderProps = {
 const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
   ({ sliderProps }, ref) => {
     const [activeSlide, setActiveSlide] = useState(0);
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const isEng = useIsEnglish();
     const isWide = useCustomWidth(1024, 10000);
     const isCustomWidth = useCustomWidth(1500, 1700);
@@ -222,7 +223,10 @@ const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                     )}
                   >
                     <Link
-                      to={`/rooms/${el.type}`}
+                      to={buildLocalizedPath(
+                        `/rooms/${el.type}`,
+                        i18n.language === "en" ? "en" : "uk"
+                      )}
                       className={cn(
                         `border border-[#FFFFFF] uppercase text-[12px] z-20 xl:w-[150px] 2xl:w-[170px] 2xl:h-[46px] xl:h-[44px] flex items-center justify-center text-center xl:text-[16px] font-cofo-medium lg:w-[170px] w-[123px] h-[40px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-all duration-300 transform`,
                         {

@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { BookLink } from "@/components/Buttons/BookLink";
 import { HeaderActionsProps } from "@/types/headerTypes";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 export const HeaderActions: React.FC<HeaderActionsProps> = ({
   showBookButton,
@@ -9,12 +10,13 @@ export const HeaderActions: React.FC<HeaderActionsProps> = ({
   customButton,
   onOrderClick,
 }) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const locale = i18n.language === "en" ? "en" : "uk";
   
   return (
     <div className="flex flex-col items-center  gap-1.75">
       {showBookButton && (
-        <BookLink className="lg:px-[34.5px] 2xl:text-[0.73vw]  2xl:w-[10.63vw] 2xl:py-[13.5px] px-[19px] 2xl:mt-[43px] text-center py-[11px] w-[171px] text-[#252526] mt-[30px] bg-[#EDE8E5] lg:w-[204px]" to="/booking">
+        <BookLink className="lg:px-[34.5px] 2xl:text-[0.73vw]  2xl:w-[10.63vw] 2xl:py-[13.5px] px-[19px] 2xl:mt-[43px] text-center py-[11px] w-[171px] text-[#252526] mt-[30px] bg-[#EDE8E5] lg:w-[204px]" to={buildLocalizedPath("/booking", locale)}>
 
           {t("buttons.book")}
         </BookLink>

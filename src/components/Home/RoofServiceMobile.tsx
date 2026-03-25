@@ -2,9 +2,11 @@ import cn from "classnames";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { suggestion } from "@/Constants/RoofService";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 export const RoofServiceMobile = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language === "en" ? "en" : "uk";
 
   return (
     <div className="w-full  justify-center flex lg:hidden">
@@ -27,7 +29,7 @@ export const RoofServiceMobile = () => {
               )}
             >
               <div className="flex flex-col items-center ">
-                <Link to={item.to}>
+                <Link to={buildLocalizedPath(item.to, locale)}>
                   <h1
                     className={
                       "text-[6.4vw] md:text-[32px] lg:text-[48px] underline-offset-2  xl:text-[64px] text-center uppercase leading-[104%] tracking-[-0.1em] xl:mt-[29px] lg:mt-[19px] w-full underline   "

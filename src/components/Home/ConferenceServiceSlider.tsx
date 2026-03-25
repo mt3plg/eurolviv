@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
 import { guest, square } from "@/store/exportsIcons";
 import { Link } from "react-router-dom";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 type Hall = {
   previewImage: string;
@@ -71,7 +72,10 @@ export const ConferenceServiceSlider = ({ halls }: HallSliderProps) => {
             </div>
             <div className="text-center flex items-center justify-center pt-[12px] lg:pt-[37px] relative">
               <Link
-                to={`/conference-service#${anchorId[index]}`}
+                to={`${buildLocalizedPath(
+                  "/conference-service",
+                  i18n.language === "en" ? "en" : "uk"
+                )}#${anchorId[index]}`}
                 className="w-fit font-cofo-medium px-5 py-2.5 text-[#8c331b] hover:bg-[#8c331b] hover:text-white border-[#8C331B] border rounded-full uppercase text-[12px]"
               >
                 {t("buttons.details")}

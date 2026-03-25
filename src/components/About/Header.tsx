@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { headerAbout } from "@/store/exportsImg";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { BookLink } from "@/components/Buttons/BookLink";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 export const AboutHeader = () => {
   const { t, i18n } = useTranslation();
@@ -53,7 +54,7 @@ export const AboutHeader = () => {
       </h4>
       <BookLink
         className="text-[#252526] mt-7.5 xl:mt-[33px] text-[12px] xl:text-[14px] bg-[#EDE8E5] xl:px-[47px] w-[171px] text-center lg:w-[204px]"
-        to={"/booking"}
+        to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
       >
         {t("buttons.book")}
       </BookLink>

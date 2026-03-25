@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import cn from "classnames";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { RoofWordmark } from "@/components/common/RoofWordmark";
+import { buildLocalizedPath } from "@/utils/localeRouting";
+import { useTranslation } from "react-i18next";
 type LogoProps = {
   logo: string;
   iconLogoStyle: string;
@@ -21,11 +23,13 @@ export const Logo = ({
   onClick,
   pathname,
 }: LogoProps) => {
+  const { i18n } = useTranslation();
+  const locale = i18n.language === "en" ? "en" : "uk";
   const isRestaurant = pathname === "/terrace" || pathname === "/restaurant";
   const isRoofRestaurant = pathname === "/restaurant";
   return (
     <Link
-      to="/"
+      to={buildLocalizedPath("/", locale)}
       className={cn(
         " items-center justify-center flex w-[33vw] h-full  2xl:w-fit xl:w-[110px] lg:w-[80px]   lg:ms-0",
         className,

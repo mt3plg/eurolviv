@@ -1,5 +1,7 @@
 import cn from "classnames";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 type ViewMenuButtonProps = {
   className?: string;
@@ -8,6 +10,7 @@ type ViewMenuButtonProps = {
 };
 
 export const ViewMenuButton = ({className, children, onClick}: ViewMenuButtonProps) => {
+  const { i18n } = useTranslation();
   const getHeaderHeight = (): number => {
     const width = window.innerWidth;
     
@@ -40,7 +43,7 @@ export const ViewMenuButton = ({className, children, onClick}: ViewMenuButtonPro
 
   return (
     <Link 
-      to="/conference-service#menu"
+      to={`${buildLocalizedPath("/conference-service", i18n.language === "en" ? "en" : "uk")}#menu`}
       onClick={handleScrollToMenu}
       className={cn("uppercase text-center font-cofo-medium text-[#EDE8E5] text-[12px] border flex items-center lg:py-[0px] lg:w-[204px] py-[8.5px] lg:text-[14px] border-[#EDE8E5] justify-center lg:text-[#8C331B] lg:border-[#8C331B] rounded-full font-cofo-medium hover:text-[white] hover:bg-[#8C331B] transition", className)}
     >

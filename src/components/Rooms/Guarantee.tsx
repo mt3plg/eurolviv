@@ -2,8 +2,9 @@ import { useTranslation } from "react-i18next";
 import { eurohotel } from "@/store/exportsImg";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
 import { Link } from "react-router-dom";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 export const Guarantee = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isEng = useIsEnglish();
 
   return (
@@ -111,7 +112,7 @@ export const Guarantee = () => {
               </ol>
 
               <Link
-                to={"/booking"}
+                to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
                 className="uppercase bg-[#8C331B] text-[#FFFFFF] lg:mt-[32px] lg:w-[234px] 2xl:w-[12.19vw] flex items-center justify-center 2xl:h-[2.4vw] self-start 2xl:px-0 xl:px-4 px-[23px] 2xl:py-3 xl:py-2.5 py-[11px] rounded-3xl 
                 font-cofo-medium 2xl:text-[0.83vw] xl:text-sm text-[12px]  mt-[24px]  hover:cursor-pointer order-3  "
               >

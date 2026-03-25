@@ -5,6 +5,7 @@ import { DetailsLink } from "@/components/Buttons/DetailsLink";
 import cn from "classnames";
 import { useCustomWidth } from "@/hooks/useCustomWidth";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 export const ConceptCasd = ({
   title,
   img,
@@ -20,7 +21,7 @@ export const ConceptCasd = ({
   index: number;
   to: string;
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isSpecialWidth = useCustomWidth(1500, 1700);
   const isMobileWidth = useCustomWidth(389, 420);
   const isSpecialMobileWidth = useCustomWidth(421, 450);
@@ -125,7 +126,9 @@ export const ConceptCasd = ({
         </p>
         <div className="mt-auto">
           <DetailsLink
-            to={to}
+            to={`${buildLocalizedPath(to.split("#")[0], i18n.language === "en" ? "en" : "uk")}${
+              to.includes("#") ? `#${to.split("#")[1]}` : ""
+            }`}
             className={`2xl:text-[0.833vw] 2xl:h-[46px] 2xl:w-[170px]  w-[141px] h-[40px] flex 2xl:px-0! items-center justify-center ${
               isSpecialWidth ? "xl:text-[.9vw]" : "xl:text-[0.9vw]"
             }`}

@@ -7,8 +7,9 @@ import { usePagesInfoStore } from "@/store/usePagesInfoStore";
 import { BookLink } from "@/components/Buttons/BookLink";
 import { useCustomWidth } from "@/hooks/useCustomWidth";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 export const Advantages = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { hotelInfo, services } = usePagesInfoStore();
   const isCustomWidth = useCustomWidth(1500, 1700);
   const isEng = useIsEnglish();
@@ -121,7 +122,7 @@ export const Advantages = () => {
                2xl:text-[0.729vw]!
                ${isCustomWidth ? "xl:w-[204px]" : "xl:w-[14vw] xl:text-[12px]!"}
                `}
-              to={"/booking"}
+              to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
             >
               {t("buttons.bookRoom")}
             </BookLink>

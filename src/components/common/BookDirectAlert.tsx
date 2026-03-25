@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { roomAlert } from "@/store/exportsImg";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
 import { useTranslation } from "react-i18next";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 interface BookDirectAlertProps {
   delay?: number;
@@ -18,7 +19,7 @@ export const BookDirectAlert = ({
 }: BookDirectAlertProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const isEng = useIsEnglish();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -74,7 +75,7 @@ export const BookDirectAlert = ({
 
           <div>
             <Link
-              to="/booking"
+              to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
               className={`uppercase bg-[#8C331B] text-white py-2.5  rounded-full 2xl:text-[12px] 2xl:mt-[22px] text-[10px] mt-3  xl:text-[0.78vw] xl:mt-[14px]
                 hover:bg-[#9e3a1e] transition-colors font-cofo-medium text-center flex justify-center items-center ${
                   isEng

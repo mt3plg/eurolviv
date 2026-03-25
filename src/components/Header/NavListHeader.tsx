@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { useLocation } from "react-router-dom";
+import { buildLocalizedPath, stripLocalePrefix } from "@/utils/localeRouting";
 
 
 type NavListHeaderToProps = {
@@ -19,8 +20,9 @@ export const NavListHeader = ({
   isScrolled,
   onItemClick,
 }: NavListHeaderToProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const location = useLocation();
+  const localizedPath = buildLocalizedPath(path, i18n.language === "en" ? "en" : "uk");
 
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -35,12 +37,12 @@ export const NavListHeader = ({
 
   return (
     <Link
-      to={path}
+      to={localizedPath}
       className={cn(
         "block md:px-[18px] text-[12px]  lg:py-3 py-0 text-[#6B6B6B] md:backdrop-blur-[54.5px] pe-[40px]  md:bg-white/26   md:text-white hover:bg-[#C7C7C7] lg:font-cofo-medium md:transition-colors md:whitespace-nowrap text-left",
         "border-b border-[#FFFFFF33] last:border-b-0",
         "text-[#6B6B6B] md:text-[#FFFFFF] md:hover:text-[#252526]",
-        isScrolled || location.pathname === '/contacts' && "text-black!"
+        isScrolled || stripLocalePrefix(location.pathname) === '/contacts' && "text-black!"
       )}
       onClick={handleClick}
     >

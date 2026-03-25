@@ -3,6 +3,7 @@ import { RoomInfoCard } from "@/components/Rooms/RoomInfoCard";
 import { useTranslation } from "react-i18next";
 import { BookLink } from "@/components/Buttons/BookLink";
 import cn from "classnames";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 export const RoomsInfo = () => {
   const { rooms } = useRoomStore();
   const { t, i18n } = useTranslation();
@@ -49,7 +50,7 @@ export const RoomsInfo = () => {
                     </p>
                     <BookLink
                       className="text-[#FFFFFF] w-[141px] flex-col items-center  bg-[#8C331B] lg:px-[28px] lg:py-[13px] px-[19px] 2xl:w-[10.63vw] 2xl:h-[2.29vw] py-[11px] lg:w-[15.63vw] xl:w-[15.63vw]  2xl:text-[0.73vw] flex justify-center lg:h-[44px] h-[40px]"
-                      to={"/booking"}
+                      to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
                     >
                       {t("buttons.book")}
                     </BookLink>
@@ -78,7 +79,7 @@ export const RoomsInfo = () => {
                 </p>
                 <BookLink
                   className="text-[#FFFFFF] bg-[#8C331B] mt-[24px] md:mt-[0px] h-[40px] flex justify-center w-[141px] items-center"
-                  to={"/booking"}
+                  to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
                 >
                     {t("buttons.book")}
                 </BookLink>

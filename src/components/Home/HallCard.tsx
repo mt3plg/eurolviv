@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { square, guest } from "@/store/exportsIcons";
 import cn from "classnames";
 import { useState } from "react";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 type HallCardProps = {
   hall: {
@@ -18,7 +19,7 @@ type HallCardProps = {
 };
 
 export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [onHover, setOnHover] = useState<number | null>(null);
 
   const anchorId = ["small-hall", "big-hall", "launge-hall"];
@@ -83,7 +84,10 @@ export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
             )}
           >
             <Link
-              to={`/conference-service#${anchorId[index]}`}
+              to={`${buildLocalizedPath(
+                "/conference-service",
+                i18n.language === "en" ? "en" : "uk"
+              )}#${anchorId[index]}`}
               className={`w-fit xl:py-[10px] font-cofo-medium flex 
                 justify-center items-center px-5 py-2 text-[#8c331b]
                 border-[#8C331B] border rounded-full uppercase 2xl:w-[8.72vw] 2xl:h-[2.4vw] 2xl:text-[.84vw]

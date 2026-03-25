@@ -6,6 +6,7 @@ import { useDropdownMenu } from "@/hooks/useDropdownMenu";
 import { renderDropdownMenu } from "@/components/utils/renderDropdownMenu";
 import { useTranslation } from "react-i18next";
 import { roomsLinksToRender, restaurantLinks } from "@/Constants/Header";
+import { buildLocalizedPath, stripLocalePrefix } from "@/utils/localeRouting";
 
 type NavLinksProps = {
   navLinks: Array<{ path: string; label: string }>;
@@ -36,7 +37,7 @@ export const NavLinks = ({
   isShowRestaurant = false,
   isMobile = false,
 }: NavLinksProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
 
 
@@ -66,7 +67,7 @@ export const NavLinks = ({
     if (path.includes('#')) {
       const [pathPart, hashPart] = path.split('#');
       
-      if (window.location.pathname === pathPart || pathPart === '') {
+      if (stripLocalePrefix(window.location.pathname) === pathPart || pathPart === '') {
         const element = document.getElementById(hashPart);
         if (element) {
           const headerHeight = getHeaderHeight();
@@ -90,6 +91,7 @@ export const NavLinks = ({
   
 
       const isDropdown = path === "/rooms" || path === "/restaurant";
+      const localizedPath = buildLocalizedPath(path, i18n.language === "en" ? "en" : "uk");
 
       return (
         <div
@@ -112,7 +114,7 @@ export const NavLinks = ({
         >
           <div className="flex items-center">
             <Link
-              to={path}
+              to={localizedPath}
               className={cn(
                 "uppercase 2xl:text-[0.83vw] xl:text-[0.94vw] smooth-scroll lg:text-[1.17vw] text-[14px] transition-colors md:font-cofo-medium whitespace-nowrap",
                 !isMobile && isActiveLink(path),
@@ -167,7 +169,7 @@ export const NavLinks = ({
         </div>
       );
     });
-  }, [t, navLinks, isMobile, handleMouseEnterRooms, handleMouseEnterRestaurant, handleMouseLeaveRooms, handleMouseLeaveRestaurant, isActiveLink, isShowRooms, isShowRestaurant, scrolled, setMenuOpen, toggleHandle, handleSmoothScroll]);
+  }, [t, i18n.language, navLinks, isMobile, handleMouseEnterRooms, handleMouseEnterRestaurant, handleMouseLeaveRooms, handleMouseLeaveRestaurant, isActiveLink, isShowRooms, isShowRestaurant, scrolled, setMenuOpen, toggleHandle, handleSmoothScroll]);
 
   return <>{renderNavLinks()}</>;
 };

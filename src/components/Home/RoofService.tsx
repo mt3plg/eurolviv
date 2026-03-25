@@ -5,9 +5,11 @@ import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { RoofWordmark } from "@/components/common/RoofWordmark";
 import { usePagesInfoStore } from "@/store/usePagesInfoStore";
 import { links } from "@/Constants/Links";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 export const RoofService = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { suggestion } = usePagesInfoStore();
+  const locale = i18n.language === "en" ? "en" : "uk";
 
   return (
     <div className="w-full  justify-center hidden md:flex">
@@ -120,7 +122,9 @@ export const RoofService = () => {
                     {t("buttons.bookTable")}
                   </Link>
                   <Link
-                    to={item.url}
+                    to={`${buildLocalizedPath(item.url.split("#")[0], locale)}${
+                      item.url.includes("#") ? `#${item.url.split("#")[1]}` : ""
+                    }`}
                     className={cn(
                       `uppercase  rounded-full  font-cofo-medium text-[#252526] bg-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:text-[16px] px-[10px] text-[12px] `,
                       {

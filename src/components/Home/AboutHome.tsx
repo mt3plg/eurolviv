@@ -4,9 +4,10 @@ import { previewImg } from "@/store/exportsImg";
 import cn from "classnames";
 import "@/components/Home/roomsSlider.css";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 export const AboutHome = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isEng = useIsEnglish();
 
   return (
@@ -219,7 +220,7 @@ export const AboutHome = () => {
                 {t("home.about.desc.2")}
               </p>
               <Link
-                to="/about"
+                to={buildLocalizedPath("/about", i18n.language === "en" ? "en" : "uk")}
                 className="border  border-[#8C331B] text-center hover:text-[#8C331B] w-[141px] h-[40px]  hover:bg-[#8C331B] uppercase   font-cofo-medium items-center justify-center flex xl:w-[146px] xl:h-[36px] 2xl:w-[167px] 2xl:h-[46px] mt-[4vw] md:mt-0
                   xl:text-[14px] lg:text-[12px] md:text-[1.3vw] text-[12px] rounded-full text-[#8C331B] mb-[13vw] md:mb-0 
                  2xl:mt-[0.5vw] xl:mt-[0.9vw]"

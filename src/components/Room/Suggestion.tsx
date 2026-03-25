@@ -4,13 +4,14 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
 import { useLocation } from "react-router-dom";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 type SuggestionToProps = {
   suggestion?: SuggestionT[];
 };
 
 export const Suggestion = ({ suggestion }: SuggestionToProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   if (!suggestion || suggestion.length === 0) return null;
@@ -93,7 +94,10 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
                   {t(desc)}
                 </p>
                 <Link
-                  to={`/rooms/${type}`}
+                  to={buildLocalizedPath(
+                    `/rooms/${type}`,
+                    i18n.language === "en" ? "en" : "uk"
+                  )}
                   className="uppercase lg:py-[12px] lg:mt-[48px] mt-[20px] 2xl:mt-[2.5vw]
                    lg:px-[30px] rounded-full font-cofo-medium lg:w-[179px] text-center flex justify-center items-center
                   md:px-[26px] md:py-[12px] 2xl:text-[0.83vw] 2xl:w-[9.32vw] 2xl:h-[2.4vw]

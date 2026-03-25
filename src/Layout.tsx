@@ -21,8 +21,11 @@ import { Restaurant } from "@/pages/Restaurant";
 import { Agreement } from "@/components/common/Agreement/Agreement";
 import { usePageStore } from "@/store/usePageStorage";
 import { Home } from "./pages/Home";
+import { stripLocalePrefix } from "@/utils/localeRouting";
+import { PageSeo } from "@/components/common/Seo/PageSeo";
 export const Layout = () => {
   const location = useLocation();
+  const normalizedPathname = stripLocalePrefix(location.pathname);
   const [menuOpen, setMenuOpen] = useState(false);
   const { activeModal, url } = useModalStore();
   const { isLastComfortBlockSection } = usePageStore();
@@ -30,7 +33,7 @@ export const Layout = () => {
     localStorage.getItem("agreement") === "true"
   );
 
-  if (location.pathname === "/admin") {
+  if (normalizedPathname === "/admin") {
     RedirectToAdminPanel();
     return <OnLoadingSpin />;
   }
@@ -39,9 +42,9 @@ export const Layout = () => {
     setIsAcceptedAgreement(true);
   };
 
-  const isBookingPage = location.pathname === "/booking";
-  const isRoomPage = /^\/rooms\/[^/]+$/.test(location.pathname);
-  const isRoomsPage = location.pathname === "/rooms";
+  const isBookingPage = normalizedPathname === "/booking";
+  const isRoomPage = /^\/rooms\/[^/]+$/.test(normalizedPathname);
+  const isRoomsPage = normalizedPathname === "/rooms";
   const isMobile = window.innerWidth < 768;
 
 
@@ -60,27 +63,48 @@ export const Layout = () => {
       {!isBookingPage && (
         <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       )}
+      <PageSeo pathname={location.pathname} />
       <ScrollToTop />
       <div className="relative lg:pb-0 pb-[60px]  ">
         <Routes>
+          <Route path="/en" element={<Home />} />
           <Route
             path="/about"
+            element={<InfinityScrollPage pageKey="about" />}
+          />
+          <Route
+            path="/en/about"
             element={<InfinityScrollPage pageKey="about" />}
           />
           <Route
             path="/rooms"
             element={<InfinityScrollPage pageKey="rooms" />}
           />
+          <Route
+            path="/en/rooms"
+            element={<InfinityScrollPage pageKey="rooms" />}
+          />
           <Route path="/" element={<Home />} />
           <Route path="/rooms/:roomType" element={<Room />} />
+          <Route path="/en/rooms/:roomType" element={<Room />} />
           <Route
             path="/contacts"
             element={<InfinityScrollPage pageKey="contacts" />}
           />
+          <Route
+            path="/en/contacts"
+            element={<InfinityScrollPage pageKey="contacts" />}
+          />
           <Route path="/conference-service" element={<ConferenceService />} />
+          <Route path="/en/conference-service" element={<ConferenceService />} />
           <Route path="/restaurant" element={<Restaurant />} />
+          <Route path="/en/restaurant" element={<Restaurant />} />
           <Route
             path="/special-offers"
+            element={<InfinityScrollPage pageKey="specialOffers" />}
+          />
+          <Route
+            path="/en/special-offers"
             element={<InfinityScrollPage pageKey="specialOffers" />}
           />
           <Route
@@ -92,10 +116,23 @@ export const Layout = () => {
             }
           />
           <Route
+            path="/en/special-offers/:offer"
+            element={
+              <>
+                <InfinityScrollPage pageKey="specialOffers" />
+              </>
+            }
+          />
+          <Route
             path="/terrace"
             element={<InfinityScrollPage pageKey="terrace" />}
           />
+          <Route
+            path="/en/terrace"
+            element={<InfinityScrollPage pageKey="terrace" />}
+          />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/en/booking" element={<Booking />} />
         </Routes>
         {(isMobile || shouldShowFooter()) && <Footer />}
         <BaseModal />

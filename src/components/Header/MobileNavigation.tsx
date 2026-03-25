@@ -9,6 +9,7 @@ import { BookLink } from "@/components/Buttons/BookLink";
 import { SocialIcons } from "@/components/Header/SocialIcons";
 import { useEffect } from "react";
 import logoSideBar from "@/assets/logo.svg";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 
 type MobileNavigationProps = {
@@ -43,7 +44,7 @@ export const MobileNavigation = ({
   isShowRestaurant,
   pathname
 }: MobileNavigationProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     if (menuOpen) {
@@ -110,7 +111,7 @@ export const MobileNavigation = ({
             />
 
             <BookLink
-              to="/booking"
+              to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
               className="w-[107px] text-center  bg-[#A47762] text-white uppercase font-cofo-medium text-[10px]! h-[30px] flex items-center justify-center px-[6.25px] py-[6px] mt-[22px] "
               onClick={() => setMenuOpen(false)}
             >

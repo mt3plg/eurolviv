@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { eurohotelAlert } from "@/store/exportsImg";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 interface PromoAlertProps {
   delay?: number;
   image?: string;
@@ -12,7 +13,7 @@ interface PromoAlertProps {
 const defaultImage = eurohotelAlert;
 
 export const PromoAlert = ({ delay = 5000, image }: PromoAlertProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const isEng = useIsEnglish()
 
@@ -66,7 +67,7 @@ export const PromoAlert = ({ delay = 5000, image }: PromoAlertProps) => {
 
           <div className="  md:pt-5.5 ">
             <Link
-              to="/booking"
+              to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
               className={`uppercase bg-[#8C331B] 2xl:text-[0.63vw] xl:w-[13.5vw]  flex justify-center items-center
                 xl:text-[0.94vw] text-white 2xl:h-[38px] xl:h-[38px] py-2.5 rounded-full
                  hover:bg-[#9e3a1e] transition-colors font-cofo-medium text-center  md:w-auto w-full text-sm md:text-base

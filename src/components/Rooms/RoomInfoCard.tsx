@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 type RoomInfoCard = {
   room: Room;
   length: number;
@@ -14,7 +15,7 @@ type RoomInfoCard = {
 export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
   const isFirstInRow = index % 3 === 0;
   const isLastInRow = (index + 1) % 3 === 0;
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isEng = useIsEnglish();
 
   return (
@@ -101,7 +102,10 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
               </div>
 
               <Link
-                to={`/rooms/${room.type}`}
+                to={buildLocalizedPath(
+                  `/rooms/${room.type}`,
+                  i18n.language === "en" ? "en" : "uk"
+                )}
                 className="uppercase 2xl:py-[10px] flex flex-col w-[165px] h-[40px]
                 justify-center items-center mt-[7.2vw] lg:mt-auto 2xl:text-[0.83vw] 2xl:w-[11.35vw] 2xl:h-[2.4vw] xl:py-[9px] lg:py-[8px] py-[8px] 5 lg:px-[16px]  2xl:mt-[1.41vw]  xl:text-[16px] lg:text-[14px] lg:w-[218px] text-[12px] border rounded-full 
                 text-[#A47762] hover:bg-[#A47762] hover:text-white font-cofo font-cofo-medium transition-colors"

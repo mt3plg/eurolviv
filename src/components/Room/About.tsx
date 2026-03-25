@@ -5,6 +5,7 @@ import { memo } from "react";
 import { guestBrown, houseBrown, squareBrown } from "@/store/exportsIcons";
 import { AboutRoomTitle } from "@/components/Room/AboutRoomTitle";
 import { BookLink } from "@/components/Buttons/BookLink";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 
 type RoomAboutToProps = {
   about?: RoomAbout;
@@ -27,7 +28,7 @@ export const About = memo(
     type,
   }: RoomAboutToProps) => {
     const { pOne, pTwo, swiperImages, rooms } = about || {};
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const isSemiLux = type?.includes("semi-lux") || false;
     console.log(type);
     if (
@@ -170,7 +171,7 @@ export const About = memo(
               </p>
 
               <BookLink
-                to={"/booking"}
+                to={buildLocalizedPath("/booking", i18n.language === "en" ? "en" : "uk")}
                 className="uppercase 2xl:text-[0.73vw] bg-[#8C331B] text-white s 2xl:mt-[3.65vw] xl:mt-[3.91vw] w-[40.27vw]
                 2xl:w-[10.73vw] 2xl:h-[2.29vw] xl:w-[16vw] xl:h-[2.6vw] flex items-center justify-center lg:w-[200px]  mt-[69px] lg:mt-[10px] mb-[28px] md:mb-0
             "

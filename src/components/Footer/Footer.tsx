@@ -16,9 +16,11 @@ import ContactMeForm from "@/components/Footer/ContactMeForm";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { useModalStore } from "@/store/useModalStore";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 export const Footer = () => {
   const { t, i18n } = useTranslation();
   const isEng = i18n.language === "en";
+  const locale = isEng ? "en" : "uk";
   const isCustomWidth = useCustomWidth(1450, 1550);
   const { isOpenOrder } = useModalStore();
 
@@ -71,7 +73,7 @@ export const Footer = () => {
                     >
                       <li className="font-cofo-medium">
                         <Link
-                          to="/"
+                          to={buildLocalizedPath("/", locale)}
                           className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
                         >
                           {t("footer.about")}
@@ -79,7 +81,7 @@ export const Footer = () => {
                       </li>
                       <li className="font-cofo-medium">
                         <Link
-                          to="/rooms"
+                          to={buildLocalizedPath("/rooms", locale)}
                           className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
                         >
                           {t("footer.rooms")}
@@ -87,7 +89,7 @@ export const Footer = () => {
                       </li>
                       <li className="font-cofo-medium">
                         <Link
-                          to="/conference-service"
+                          to={buildLocalizedPath("/conference-service", locale)}
                           className="lg:hover:underline   lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
                         >
                           {t("footer.conferenceServices")}
@@ -95,7 +97,7 @@ export const Footer = () => {
                       </li>
                       <li className="font-cofo-medium">
                         <Link
-                          to="/restaurant"
+                          to={buildLocalizedPath("/restaurant", locale)}
                           className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
                         >
                           {isEng
@@ -105,7 +107,7 @@ export const Footer = () => {
                       </li>
                       <li className="font-cofo-medium">
                         <Link
-                          to="/terrace"
+                          to={buildLocalizedPath("/terrace", locale)}
                           className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
                         >
                           {isEng
@@ -115,7 +117,7 @@ export const Footer = () => {
                       </li>
                       <li className="font-cofo-medium">
                         <Link
-                          to="/special-offers"
+                          to={buildLocalizedPath("/special-offers", locale)}
                           className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
                         >
                           {t("footer.specialOffers")}
