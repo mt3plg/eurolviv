@@ -47,7 +47,12 @@ jobs:
         RewriteRule . /index.html [L]
         </IfModule>
         EOF
-
+        
+    - name: Generate sitemap
+      run: |
+        chmod +x generate-sitemap.sh
+        ./generate-sitemap.sh
+        
     - name: Prepare SSH
       env:
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
