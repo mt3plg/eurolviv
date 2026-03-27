@@ -22,10 +22,10 @@ jobs:
         sudo rm -rf ./* || true
 
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v5
       with:
         node-version: '22'
 
@@ -47,11 +47,6 @@ jobs:
         RewriteRule . /index.html [L]
         </IfModule>
         EOF
-        
-    - name: Generate sitemap
-      run: |
-        chmod +x ./scripts/generate-sitemap.sh
-        ./scripts/generate-sitemap.sh
         
     - name: Prepare SSH
       env:
