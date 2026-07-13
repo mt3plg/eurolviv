@@ -89,7 +89,8 @@ type ToolbarBtn = {
 };
 
 export const CmsEditor = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const { slug: slugParam } = useParams<{ slug: string }>();
+  const slug = slugParam ? decodeURIComponent(slugParam) : undefined;
   const isNew = !slug;
   const navigate = useNavigate();
   const token = getCmsToken();

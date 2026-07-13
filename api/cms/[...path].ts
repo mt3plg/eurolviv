@@ -116,8 +116,16 @@ const listGithubPosts = async () => {
   });
 };
 
+const encodeGithubPath = (filePath: string) =>
+  filePath
+    .split("/")
+    .map((segment) => encodeURIComponent(segment))
+    .join("/");
+
 const readGithubFile = async (filePath: string) => {
-  const response = await githubFetch(`/contents/${filePath}?ref=${BRANCH}`);
+  const response = await githubFetch(
+    `/contents/${encodeGithubPath(filePath)}?ref=${BRANCH}`
+  );
   if (response.status === 404) return null;
   if (!response.ok) throw new Error(`GitHub read failed: ${response.status}`);
   const data = (await response.json()) as GithubContent;
@@ -133,7 +141,7 @@ const upsertGithubFile = async (
   message: string
 ) => {
   const existing = await readGithubFile(filePath);
-  const response = await githubFetch(`/contents/${filePath}`, {
+  const response = await githubFetch(`/contents/${encodeGithubPath(filePath)}`, {
     method: "PUT",
     body: JSON.stringify({
       message,
@@ -151,7 +159,7 @@ const upsertGithubFile = async (
 const deleteGithubFile = async (filePath: string, message: string) => {
   const existing = await readGithubFile(filePath);
   if (!existing) return;
-  const response = await githubFetch(`/contents/${filePath}`, {
+  const response = await githubFetch(`/contents/${encodeGithubPath(filePath)}`, {
     method: "DELETE",
     body: JSON.stringify({
       message,
