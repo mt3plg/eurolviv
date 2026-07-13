@@ -26,7 +26,10 @@ export const cmsFetch = async <T>(
 
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
-    throw new Error(data.error || "Request failed");
+    const fallback = response.statusText || "Request failed";
+    throw new Error(
+      typeof data.error === "string" && data.error ? data.error : fallback
+    );
   }
   return data as T;
 };

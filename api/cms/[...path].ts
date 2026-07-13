@@ -4,18 +4,29 @@ import {
   getCmsAuthConfig,
   getCmsSessionToken,
   validateCmsLogin,
-} from "../../cms-auth";
+} from "../_lib/cms-auth";
 import {
   parseFileName,
   parseFrontmatter,
   serializeMarkdown,
   slugify,
   type BlogPostInput,
-} from "../../src/utils/blogMarkdown";
+} from "../_lib/blog-markdown";
 
 const REPO = process.env.CMS_GITHUB_REPO || "mt3plg/eurolviv";
 const BRANCH = process.env.CMS_GITHUB_BRANCH || "main";
 const authConfig = getCmsAuthConfig();
+
+const getRouteParts = (req: VercelRequest): string[] => {
+  const raw = req.query.path;
+  if (Array.isArray(raw)) return raw.map(String);
+  if (typeof raw === "string" && raw) return [raw];
+
+  const parts = (req.url || "").split("?")[0].split("/").filter(Boolean);
+  const cmsIndex = parts.indexOf("cms");
+  if (cmsIndex >= 0) return parts.slice(cmsIndex + 1);
+  return [];
+};
 
 type GithubContent = {
   content?: string;
@@ -263,10 +274,9 @@ const getSessionToken = () => getCmsSessionToken(authConfig);
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
-    const parts = (req.url || "").split("?")[0].split("/").filter(Boolean);
-    // /api/cms/... => ["api","cms",...]
-    const action = parts[2] || "";
-    const slug = parts[3] ? decodeURIComponent(parts[3]) : "";
+    const routeParts = getRouteParts(req);
+    const action = routeParts[0] || "";
+    const slug = routeParts[1] ? decodeURIComponent(routeParts[1]) : "";
 
     if (action === "login" && req.method === "POST") {
       try {
