@@ -41,12 +41,12 @@ export const Terrase = ({ terase, index }: TerraseToProps) => {
             <div className="flex-col flex items-center justify-center   md:border-e   border-[#B3B3B3AD] ">
               <div className="overflow-hidden w-full   flex flex-col items-center justify-center ">
                 <div className="2xl:px-[3.02vw_3.85vw] xl:px-[35px_40px] text-center md:text-left px-[18px] 2xl:py-[50px_33px] lg:py-[30px_20px] py-[50px_33px]">
-                  <h1
+                  <h2
                     className="px-10 md:px-0 uppercase  2xl:text-[5.21vw] xl:text-[5.25vw] lg:text-[50px] md:text-[40px] text-[32px] leading-[81%] w-[80%] 
                   tracking-[-0.07em] text-[#242425]  2xl:w-[506px] xl:w-[70%] whitespace-normal [text-wrap:balance] mx-auto lg:mx-0"
                   >
                     {t(title)}
-                  </h1>
+                  </h2>
                   <div
                     className={`space-y-4  2xl:mt-[1.93vw] mt-[27px] ${
                       !isEng ? "xl:w-[106%]" : ""

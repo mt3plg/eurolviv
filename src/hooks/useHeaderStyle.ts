@@ -12,6 +12,9 @@ const useNavbarStyles = () => {
   const isSpecialOfferLanding = /^\/special-offers\/[^/]+$/.test(
     normalizedPathname
   );
+  const isBlogPage =
+    normalizedPathname === "/blog" ||
+    /^\/blog\/[^/]+$/.test(normalizedPathname);
   const [scrolled, setScrolled] = useState(false);
   const [isShowRooms, setIsShowRooms] = useState(false);
 
@@ -20,11 +23,12 @@ const useNavbarStyles = () => {
       setScrolled(window.scrollY > 50);
     };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isHeaderScrolled = scrolled || isSpecialOfferLanding;
+  const isHeaderScrolled = scrolled || isSpecialOfferLanding || isBlogPage;
 
   function isActiveLink(path: string) {
     const isActive = normalizedPathname === path;
