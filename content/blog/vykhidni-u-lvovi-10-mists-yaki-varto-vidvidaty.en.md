@@ -1,167 +1,167 @@
 ---
-title: "Вихідні у Львові: 10 місць, які варто відвідати"
+title: "Weekend in Lviv: 10 places worth visiting"
 date: 2026-07-13T09:53:02.125Z
-description: "План вихідних у Львові: 10 місць, маршрут на 2 дні, ресторани, парки та поради, де зупинитися біля центру."
+description: "A weekend plan for Lviv: 10 places, a 2-day route, restaurants, parks and tips on where to stay near the centre."
 cover: ""
 draft: false
 ---
 
-Побачити весь Львів за два дні майже неможливо, а от відвідати топові локації та відчути атмосферу старовинного міста — реально. Навіть за такий короткий час ви зможете пройтися центром, відвідати кілька музеїв і залишити кілька годин на парки.
+Seeing all of Lviv in two days is almost impossible, but visiting the top locations and feeling the atmosphere of the old city is realistic. Even in a short trip you can walk through the centre, visit a few museums and leave a few hours for parks.
 
-Якщо ви їдете до Львова на вихідні, радимо перший день присвятити площі Ринок і сусіднім кварталам, а наступний — Шевченківському гаю, Стрийському парку або Підзамчу. Більшість центральних пам’яток розташовані поруч, тому між ними легко ходити пішки. Плануючи вихідні у Львові, оберіть кілька місць в одному районі — так вистачить часу на музей, обід і вечірню виставу.
+If you are coming to Lviv for a weekend, we recommend dedicating the first day to Rynok Square and nearby streets, and the next day to Shevchenkivskyi Hai, Stryiskyi Park or Pidzamche. Most central sights are close to each other, so you can walk between them. When planning a weekend in Lviv, choose several places in one area — then you will have enough time for a museum, lunch and an evening show.
 
-Отже, далі ми складаємо план, і не забуваємо про організаційні моменти.
+Below is a practical plan, including organisational tips.
 
-## Чому варто провести вихідні у Львові?
+## Why spend a weekend in Lviv?
 
-Історичний центр компактний: від Оперного театру до площі Ринок, Вірменської вулиці та Домініканського костелу можна дійти без транспорту. За одну прогулянку ви побачите архітектуру різних епох, зайдете до музею та вип’єте кави.
+The historic centre is compact: from the Opera House to Rynok Square, Virmenska Street and the Dominican Church you can walk without transport. In one stroll you will see architecture from different eras, visit a museum and have coffee.
 
-За сонячної погоди варто піднятися на ратушу або піти до парку. У дощ можна піти до палацу, спуститися у підземелля або відвідати галерею чи Львівський історичний музей. І не надто переймайтеся погодинним розкладом вихідних у Львові — все одно його доведеться коригувати через мінливу погоду, зміни в розкладах чи бажання зайти ще в ту кав’ярню.
+In sunny weather, climb the Town Hall tower or go to a park. In the rain, visit a palace, go underground or explore a gallery or the Lviv History Museum. Do not worry too much about an hourly schedule — weather, opening hours and spontaneous café stops will change it anyway.
 
-## Що подивитись у Львові за 2 дні?
+## What to see in Lviv in 2 days?
 
-Перший день почніть біля Львівського оперного театру. Далі пройдіть проспектом Свободи до площі Ринок, підніміться на вежу ратуші, зайдіть до Чорної кам’яниці та Італійського дворика. Після обіду зверніть на Вірменську вулицю, огляньте Вірменський собор і завершіть день біля Домініканського костелу або у парку «Високий замок».
+Start day one near the Lviv Opera House. Then walk along Svobody Avenue to Rynok Square, climb the Town Hall tower, visit the Black House and the Italian Courtyard. After lunch, turn to Virmenska Street, see the Armenian Cathedral and finish near the Dominican Church or Vysokyi Zamok Park.
 
-На другий день поєднайте Палац Потоцьких зі Стрийським парком, а потім доїдьте до Шевченківського гаю. Ці місця розташовані в різних частинах міста, тому між ними знадобиться трамвай, автобус або таксі. Якщо хочеться подивитись у Львові щось за межами історичного центру, додайте Кастелівку, Підзамче чи парк «Залізна Вода».
+On day two, combine Potocki Palace with Stryiskyi Park, then go to Shevchenkivskyi Hai. These places are in different parts of the city, so you will need a tram, bus or taxi. If you want to see Lviv beyond the historic centre, add Kastelivka, Pidzamche or Zalizna Voda Park.
 
-### Львівський оперний театр
+### Lviv Opera House
 
-Будівлю Львівського національного академічного театру опери та балету видно ще із середини проспекту Свободи. Фасад прикрашають скульптурні композиції, а всередині увагу привертають парадні сходи, Дзеркальна зала та пишно оздоблена глядацька зала.
+The Lviv National Opera is visible from the middle of Svobody Avenue. The façade is decorated with sculptures, and inside the grand staircase, Mirror Hall and richly decorated auditorium stand out.
 
-Найкраще прийти сюди на оперу, балет або концерт. Оглядові екскурсії також проводять, але їхній розклад треба уточнювати. На популярні вистави у п’ятницю та вихідні квитки краще купувати наперед.
+The best way to visit is for an opera, ballet or concert. Guided tours are also available, but check the schedule. For popular Friday and weekend shows, buy tickets in advance.
 
-### Площа Ринок і Львівська ратуша
+### Rynok Square and Lviv Town Hall
 
-Майже всі туристи починають вікенд у Львові на площі Ринок — і не дарма. Тут найбільша концентрація історичних пам’яток, розважальних закладів і сувенірних лавок. Навіть якщо ви терпіти не можете мейнстрім, зробіть виняток для цього чарівного місця.
+Almost every tourist starts a Lviv weekend at Rynok Square — and for good reason. It has the highest concentration of historic landmarks, entertainment venues and souvenir shops.
 
-Почніть прогулянку старим Львовом, пройшовшись вздовж усіх чотирьох боків площі. Роздивіться фасади кам’яниць. У багатьох із них працюють музеї, галереї та кав’ярні. Частина будинків має внутрішні дворики. На площі стоять чотири фонтани з античними фігурами, у центрі — ратуша. З її вежі видно дахи старого міста, церковні шпилі та пагорб Високого замку.
+Walk along all four sides of the square and look at the façades. Many buildings house museums, galleries and cafés. Some have inner courtyards. Four fountains with antique figures stand on the square, with the Town Hall in the centre. From its tower you can see the roofs of the old town, church spires and Vysokyi Zamok hill.
 
-### Чорна кам’яниця
+### The Black House
 
-Темний фасад Чорної кам’яниці помітно вирізняється серед сусідніх будинків площі Ринок. Кам’яницю звели наприкінці XVI століття. Сьогодні в будинку на площі Ринок, 4 працює Музей історії Львова — частина Львівського історичного музею.
+The dark façade of the Black House stands out among neighbouring buildings on Rynok Square. It was built at the end of the 16th century. Today, Rynok Square 4 houses the Museum of the History of Lviv, part of the Lviv History Museum.
 
-Експозиція розповідає про розвиток міста й повсякденне життя його мешканців. Її можна спокійно оглянути приблизно за годину.
+The exhibition tells about the city’s development and everyday life. You can explore it calmly in about an hour.
 
-### Італійський дворик
+### Italian Courtyard
 
-Італійський дворик розташований у кам’яниці Корнякта на площі Ринок, 6. Його оточують три яруси аркадних галерей, характерних для італійських палаців доби Відродження. Від гамірної площі дворик відділяє лише прохід крізь кам’яницю, але всередині значно тихіше.
+The Italian Courtyard is in the Korniakt House at Rynok Square 6. It is surrounded by three tiers of arcaded galleries typical of Italian Renaissance palaces. Only a passage through the building separates it from the busy square, but inside it is much quieter.
 
-Для короткого візиту достатньо оглянути дворик. Якщо маєте більше часу під час відпочинку у Львові на вихідні, зайдіть до Королівських залів. У теплу пору тут іноді відбуваються камерні концерти та вистави.
+For a short visit, seeing the courtyard is enough. If you have more time, visit the Royal Halls. In warm weather, chamber concerts and performances sometimes take place here.
 
-### Високий замок
+### Vysokyi Zamok
 
-Високий замок — парк на Замковій горі. Від середньовічної фортеці збереглося зовсім мало, проте з нижніх терас видно історичний центр і північну частину міста. Парк відкритий для прогулянок.
+Vysokyi Zamok is a park on Castle Hill. Little remains of the medieval fortress, but from the lower terraces you can see the historic centre and the northern part of the city. The park is open for walks.
 
-Копець та оглядовий майданчик можуть бути закриті через пошкодження та потребу в реконструкції, тож перед підйомом уточніть, чи відкрита верхня частина. Прогулянка парком займає близько години; на підйом краще вирушати у зручному взутті.
+The mound and viewpoint may be closed due to damage and reconstruction, so check access before climbing. A walk takes about an hour; wear comfortable shoes.
 
-### Вірменська вулиця та Вірменський собор
+### Virmenska Street and the Armenian Cathedral
 
-Від площі Ринок до Вірменської вулиці — лише кілька хвилин пішки, але людей тут зазвичай менше. На вулиці є старі дворики, галереї та невеликі кав’ярні. Головна пам’ятка — Вірменський кафедральний собор, заснований у XIV столітті.
+From Rynok Square to Virmenska Street it is only a few minutes on foot, but there are usually fewer people. The street has old courtyards, galleries and small cafés. The main landmark is the Armenian Cathedral, founded in the 14th century.
 
-Усередині варто роздивитися стінописи Яна Генрика Розена, мозаїки та кам’яні стели-хачкари. На храм, сусідні дворики й невеликі галереї залиште приблизно годину.
+Inside, look at Jan Henryk Rosen’s murals, mosaics and khachkar steles. Leave about an hour for the church, courtyards and small galleries.
 
-### Шевченківський гай
+### Shevchenkivskyi Hai
 
-Шевченківський гай — це Музей народної архітектури і побуту імені Климентія Шептицького. На великій зеленій території зібрані дерев’яні церкви, житлові будинки, садиби та господарські споруди з різних регіонів України.
+Shevchenkivskyi Hai is the Museum of Folk Architecture and Life named after Klymentii Sheptytskyi. On a large green territory you will find wooden churches, houses, farmsteads and outbuildings from different regions of Ukraine.
 
-Якщо ви хочете спокійно провести вихідні у Львові, обов’язково відвідайте це місце. Стежки парку проходять між садами, старими будівлями й пагорбами. У музеї проводять майстер-класи, ярмарки та сезонні свята, тому перед поїздкою варто переглянути афішу.
+If you want a calm weekend in Lviv, visit this place. Paths run between gardens, old buildings and hills. The museum hosts workshops, fairs and seasonal festivals, so check the programme before your trip.
 
-### Стрийський парк
+### Stryiskyi Park
 
-Біля головного входу до Стрийського парку розташоване озеро, а далі починаються довгі алеї та підйом до верхньої частини. Площа парку перевищує 50 гектарів, тому тут легко знайти тиху доріжку навіть у теплий вихідний.
+Near the main entrance to Stryiskyi Park there is a lake, then long alleys and a climb to the upper part. The park covers more than 50 hectares, so it is easy to find a quiet path even on a warm weekend.
 
-Навесні тут цвітуть дерева й квіти на клумбах, а влітку більшість доріжок залишається в затінку. Після кількох годин у центрі тут приємно пройтися біля озера або посидіти під деревами. Якщо шукаєте, де відпочити у Львові після насиченої прогулянки, рекомендуємо завітати саме до Стрийського парку.
+In spring trees and flowerbeds bloom, and in summer most paths stay in the shade. After a busy centre walk, it is pleasant to stroll by the lake or sit under the trees.
 
-### Палац Потоцьких
+### Potocki Palace
 
-Палац Потоцьких збудували як парадну міську резиденцію у французькому стилі. Перед палацом є парадний двір, а в залах працює експозиція європейського мистецтва XIV–XVIII століть.
+Potocki Palace was built as a ceremonial city residence in the French style. There is a front courtyard, and inside you will find European art from the 14th–18th centuries.
 
-Поруч стоїть Львівський палац мистецтв, де проводять виставки та ярмарки. Палац Потоцьких і сусідній мистецький простір легко поєднати в одній прогулянці вулицею Коперника.
+Nearby is the Lviv Palace of Arts with exhibitions and fairs. Potocki Palace and the neighbouring art space are easy to combine in one walk along Kopernyka Street.
 
-### Домініканський костел
+### Dominican Church
 
-Домініканський костел, нині храм Пресвятої Євхаристії, легко впізнати за великим куполом і пізньобароковим фасадом. Він розташований біля площі Музейної, за кілька хвилин ходьби від площі Ринок.
+The Dominican Church, now the Church of the Holy Eucharist, is easy to recognise by its large dome and late Baroque façade. It stands near Muzeina Square, a few minutes from Rynok Square.
 
-Усередині — просторий овальний зал під великим куполом. Храм діючий, тому під час богослужінь варто поводитися тихо й уточнювати правила фотографування.
+Inside there is a spacious oval hall under a large dome. The church is active, so during services keep quiet and check photography rules.
 
-## Відпочинок у Львові з друзями
+## A weekend in Lviv with friends
 
-День із друзями можна почати з виставки у Jam Factory або концерту в Органному залі, а ввечері повернутися до центру. Такий план залишає час і на прогулянку, і на спільну вечерю, не перетворюючи весь день на перехід між закладами.
+Start the day with an exhibition at Jam Factory or a concert at the Organ Hall, then return to the centre in the evening. This plan leaves time for both a walk and a shared dinner.
 
-Актуальна міська афіша та мапа Google допоможуть вирішити, куди піти у Львові на вихідних. У теплу пору до постійних майданчиків додаються концерти просто неба, ярмарки та фестивалі вуличної їжі.
+The city events calendar and Google Maps help decide where to go. In warm weather, open-air concerts, fairs and street-food festivals are added to permanent venues.
 
-## Цікаві ресторани та бари
+## Restaurants and bars
 
-Театр пива «Правда» на площі Ринок варто обрати заради власної броварні та вечірніх виступів оркестру. Тут завжди гамірно, тому заклад більше підходить великій компанії, ніж тихій зустрічі вдвох.
+Pravda Beer Theatre on Rynok Square is worth choosing for its own brewery and evening orchestra performances. It is lively, so it suits a large group better than a quiet dinner for two.
 
-На Вірменській працює «Гасова Лямпа» — ресторан із колекцією старих гасових ламп і терасою над дахами сусідніх будинків. Неподалік розташована Львівська копальня кави, де з основної зали можна спуститися у підземелля під площею Ринок.
+On Virmenska Street, Gasova Lyampa has a collection of old kerosene lamps and a terrace above neighbouring roofs. Nearby is the Lviv Coffee Mine, where you can go from the main hall into the underground under Rynok Square.
 
-Для спокійнішого вечора можна відійти від центральної площі до вулиці Лесі Українки. Тут працюють невеликі винні бари й ресторани без розрекламованих легенд, куди приходять насамперед за вечерею та розмовою.
+For a calmer evening, move from the central square to Lesi Ukrainky Street. There are small wine bars and restaurants without overhyped legends, where people come mainly for dinner and conversation.
 
-Якщо хочеться поєднати вечерю з панорамним видом на Львів, варто завітати до ресторану ROOF в Eurohotel. Заклад розташований на восьмому поверсі готелю неподалік історичного центру та пропонує страви європейської й української кухні, сезонне меню та простору терасу. Це гарний вибір як для романтичної вечері, так і для зустрічі з друзями чи святкування особливої події.
+If you want dinner with a panoramic view of Lviv, visit ROOF restaurant at Eurohotel. It is on the 8th floor near the historic centre and offers European and Ukrainian cuisine, a seasonal menu and a spacious terrace. It is a good choice for a romantic dinner, a meeting with friends or a special celebration.
 
-## Активний відпочинок
+## Active leisure
 
-У скеледромі The Wall можна спробувати болдерінг — лазіння невисокими трасами без мотузок, але зі страховочними матами. Для першого заняття достатньо короткого інструктажу, тому попередній досвід не обов’язковий.
+At The Wall climbing gym you can try bouldering — climbing short routes without ropes, but with safety mats. A short briefing is enough for the first session.
 
-Картинг, VR і батутні зони зібрані у Dragon Park. Іноді можна почути, що це суто дитячий простір, але насправді електричні карти та VR-атракціони підходять і дорослим.
+Karting, VR and trampoline zones are gathered at Dragon Park. It is sometimes seen as a children’s space, but electric karts and VR attractions also suit adults.
 
-Якщо ви налаштовані на активніший відпочинок у Львові на вихідні, можна поїхати до аквапарку «Пляж». Тут є басейни, водні гірки, джакузі та зона саун, тож компанія може провести кілька годин у воді незалежно від погоди. Аквапарк працює у Львові протягом усього року.
+For a more active weekend, go to Plyazh aqua park. There are pools, water slides, jacuzzis and a sauna area, so the group can spend several hours in the water regardless of the weather. The aqua park operates all year round.
 
-## Сімейний відпочинок у Львові на вихідні
+## Family weekend in Lviv
 
-Молодшим дітлахам підійдуть Океанаріум і великі розважальні простори, школярам — Музей науки або підйом на ратушу. Плануючи, куди піти у Львові на вихідних із родиною, залишайте між великими відвідуваннями час на обід і коротку прогулянку. Одного музею та одного парку на день зазвичай достатньо.
+Younger children will enjoy the Oceanarium and large entertainment spaces; schoolchildren — the Science Museum or the Town Hall climb. When planning a family weekend, leave time between major visits for lunch and a short walk. One museum and one park per day is usually enough.
 
-### Популярні оглядові майданчики
+### Viewpoints
 
-Вежа ратуші залишається найвідомішим місцем для огляду центральної частини Львова. Підйом довгий і проходить сходами, тому краще йти зі старшими дітьми, які готові піднятися самостійно.
+The Town Hall tower remains the best-known place for views of central Lviv. The climb is long and goes by stairs, so it is better with older children who can walk up on their own.
 
-Інша міська панорама відкривається з вежі Органного залу. Її графік потрібно перевіряти окремо, оскільки доступ залежить від програми відвідувань.
+Another city panorama opens from the Organ Hall tower. Check its schedule separately, as access depends on the visiting programme.
 
-Ще один варіант — нижні тераси парку «Високий замок». Звідси видно центральну частину міста, а підйом значно коротший і простіший, ніж до верхнього оглядового майданчика.
+Another option is the lower terraces of Vysokyi Zamok Park. From here you can see the central part of the city, and the climb is shorter and easier than to the upper viewpoint.
 
-### Розважальні центри
+### Entertainment centres
 
-Львівський музей науки побудований навколо інтерактивних експонатів. Діти можуть запускати механізми, перевіряти фізичні явища й самостійно розбиратися, як працюють звичні речі.
+The Lviv Science Museum is built around interactive exhibits. Children can start mechanisms, test physical phenomena and explore how familiar things work.
 
-В Океанаріумі головна частина маршруту проходить біля великих акваріумів і підводного тунелю. На візит вистачає кількох годин, тому його легко поєднати з прогулянкою центром.
+At the Oceanarium, the main route goes past large aquariums and an underwater tunnel. A visit takes a few hours, so it is easy to combine with a walk in the centre.
 
-Для довшого сімейного дня підійде Leoland. У комплексі працюють дитячі простори, спортивні секції та фудхол, тож дорослим не потрібно вигадувати окрему програму на час дитячих занять.
+For a longer family day, Leoland works well. The complex has children’s spaces, sports sections and a food court, so adults do not need a separate programme during kids’ activities.
 
-### Парки
+### Parks
 
-Парк Івана Франка розташований поруч із центром і добре підходить для короткої паузи між музеями. Його можна поєднати із собором Святого Юра або прогулянкою до проспекту Свободи.
+Ivan Franko Park is near the centre and suits a short pause between museums. You can combine it with St. George’s Cathedral or a walk to Svobody Avenue.
 
-У Стрийському парку є озеро, широкі алеї та достатньо місця для кількох годин надворі. Для активнішого дня підійде Парк культури, де в теплий сезон працюють атракціони.
+Stryiskyi Park has a lake, wide alleys and enough space for several outdoor hours. For a more active day, Culture Park has attractions in the warm season.
 
-Шевченківський гай варто залишити на пів дня. Стежки проходять між дерев’яними церквами, садибами та садами, а під час свят у музеї проводять ярмарки й майстер-класи.
+Leave half a day for Shevchenkivskyi Hai. Paths run between wooden churches, farmsteads and gardens, and during holidays the museum hosts fairs and workshops.
 
-Біля Львова також є озера, лісові маршрути та заміські парки. Їх доцільніше додавати до поїздки, коли є автомобіль і хоча б ще один вільний день.
+Near Lviv there are also lakes, forest routes and suburban parks. Add them when you have a car and at least one more free day.
 
-## Нетуристичні місця у Львові
+## Non-touristy places in Lviv
 
-Кастелівка підійде тим, хто цікавиться міською архітектурою. У кварталах навколо вулиць Котляревського та Генерала Чупринки збереглися вілли й будинки кінця XIX — початку XX століття.
+Kastelivka suits those interested in city architecture. Around Kotliarevskoho and Generala Chuprynky streets, villas and houses from the late 19th–early 20th centuries remain.
 
-На Підзамчі варто зайти до Jam Factory Art Center. Колишній фабричний комплекс перетворили на центр сучасного мистецтва, де проходять виставки, театральні події та концерти. Перед візитом краще обрати конкретну подію, оскільки програма регулярно змінюється.
+In Pidzamche, visit Jam Factory Art Center. A former factory complex became a contemporary art centre with exhibitions, theatre events and concerts. Choose a specific event before visiting, as the programme changes regularly.
 
-Якщо в програмі відпочинку у Львові ви виділили пару годин на природу, вам підійде парк «Знесіння». Тут є лісові стежки, пагорби Кайзервальду й виходи до оглядових місць над Підзамчем. Поруч височіє Гора Лева, звідки видно північні квартали та центр міста.
+If you set aside a couple of hours for nature, Znesinnia Park is a good choice. There are forest paths, Kaiserwald hills and viewpoints above Pidzamche. Nearby is Lion Mountain, with views of northern districts and the city centre.
 
-## Коли краще їхати до Львова?
+## When is the best time to visit Lviv?
 
-Пізня весна й рання осінь найкраще підходять для довгих прогулянок. Влітку більше відкритих терас, концертів і фестивалів, хоча в історичному центрі стає людніше.
+Late spring and early autumn are best for long walks. In summer there are more open terraces, concerts and festivals, though the historic centre becomes busier.
 
-Взимку у Львові проходять різдвяні ярмарки та святкові події. Але під час морозу бруківка й сходи можуть бути слизькими, тому знадобиться відповідне взуття.
+In winter, Christmas markets and festive events take place. During frost, cobblestones and stairs can be slippery, so bring suitable shoes.
 
-## Яким транспортом найкраще добиратись до Львова?
+## How to get to Lviv?
 
-Для більшості мандрівників найзручнішим залишається потяг. Нічний рейс дозволяє зранку одразу вирушити до центру. Від головного вокзалу сюди курсують трамваї та автобуси, також можна скористатися таксі.
+For most travellers, the train remains the most convenient option. A night train lets you start for the centre in the morning. Trams and buses run from the main station, and taxis are also available.
 
-З міст без прямого залізничного сполучення до Львова зручно їхати автобусом. Автомобіль стане у пригоді, якщо ви плануєте подорожувати Львівщиною або відвідати місця за містом. Хоча паркування в історичній частині краще продумати заздалегідь — це не просто місцевий мем.
+From cities without direct rail links, buses are convenient. A car helps if you plan to travel around the Lviv region or visit places outside the city. Parking in the historic part should be planned in advance.
 
-## Де зупинитися у Львові?
+## Where to stay in Lviv?
 
-Якщо ви хочете провести вихідні у Львові поруч із історичним центром, але трохи осторонь найгучніших вулиць, вам підійде Eurohotel на вулиці Тершаковців, 6А. Він має 100 номерів різних класів, а на його восьмому поверсі працює ресторан ROOF із панорамним видом на місто.
+If you want a weekend in Lviv near the historic centre but a little away from the noisiest streets, Eurohotel at Tershakovtsiv 6A is a good fit. It has 100 rooms of different categories, and on the 8th floor ROOF restaurant offers a panoramic city view.
 
-Від Eurohotel можна пішки дійти до Палацу Потоцьких, проспекту Свободи та історичного центру. Це дає вам певну свободу у розкладі — можна залишити пару годин вільними і не поспішати: затриматися на виставці, випити каву з круасаном чи дорогою зазирнути у відкритий дворик.
+From Eurohotel you can walk to Potocki Palace, Svobody Avenue and the historic centre. This gives you flexibility: leave a couple of free hours, stay longer at an exhibition, have coffee with a croissant or look into an open courtyard on the way.
 
-Після насиченого дня ви зможете швидко повернутися з будь-якого району Львова до Eurohotel, де вас вже чекатимуть затишне фойє, комфортабельний номер і смачна їжа в ресторані.
+After a busy day you can quickly return from any district of Lviv to Eurohotel, where a cosy lobby, a comfortable room and good food in the restaurant are waiting.
