@@ -8,7 +8,7 @@ import {
   type ReactNode,
 } from "react";
 import ReactMarkdown from "react-markdown";
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate, useParams } from "react-router-dom";
 import { cmsFetch, getCmsToken } from "@/cms/cmsApi";
 import type { BlogPostInput } from "@/utils/blogMarkdown";
 import { slugify } from "@/utils/blogMarkdown";
@@ -93,6 +93,7 @@ export const CmsEditor = () => {
   const slug = slugParam ? decodeURIComponent(slugParam) : undefined;
   const isNew = !slug;
   const navigate = useNavigate();
+  const location = useLocation();
   const token = getCmsToken();
   const bodyRef = useRef<HTMLTextAreaElement | null>(null);
   const coverInputRef = useRef<HTMLInputElement | null>(null);
@@ -236,7 +237,23 @@ export const CmsEditor = () => {
 
     if (!slug) return;
 
+    const statePost = (
+      location.state as { post?: BlogPostInput; justSaved?: boolean } | null
+    )?.post;
+    const justSaved = Boolean(
+      (location.state as { justSaved?: boolean } | null)?.justSaved
+    );
+
     const load = async () => {
+      if (statePost && statePost.slug === slug) {
+        setForm(statePost);
+        setSlugTouched(true);
+        historyRef.current = [statePost.bodyUk || ""];
+        historyIndexRef.current = 0;
+        setLoading(false);
+        if (justSaved) return;
+      }
+
       try {
         const data = await cmsFetch<{ post: BlogPostInput }>(
           `/posts/${encodeURIComponent(slug)}`
@@ -245,14 +262,17 @@ export const CmsEditor = () => {
         setSlugTouched(true);
         historyRef.current = [data.post.bodyUk || ""];
         historyIndexRef.current = 0;
+        setError("");
       } catch (err) {
-        setError(err instanceof Error ? err.message : "Не вдалося завантажити");
+        if (!(statePost && statePost.slug === slug)) {
+          setError(err instanceof Error ? err.message : "Не вдалося завантажити");
+        }
       } finally {
         setLoading(false);
       }
     };
     load();
-  }, [isNew, slug, token]);
+  }, [isNew, slug, token, location.state]);
 
   useEffect(() => {
     if (!dirty) return;
@@ -456,7 +476,13 @@ export const CmsEditor = () => {
         });
         localStorage.removeItem(draftKey());
         setDirty(false);
-        navigate(`/cms/edit/${data.slug}`, { replace: true });
+        navigate(`/cms/edit/${data.slug}`, {
+          replace: true,
+          state: {
+            justSaved: true,
+            post: { ...payload, slug: data.slug },
+          },
+        });
       } else if (slug) {
         const data = await cmsFetch<{ slug: string }>(
           `/posts/${encodeURIComponent(slug)}`,
@@ -468,7 +494,13 @@ export const CmsEditor = () => {
         localStorage.removeItem(draftKey(slug));
         setDirty(false);
         if (data.slug !== slug) {
-          navigate(`/cms/edit/${data.slug}`, { replace: true });
+          navigate(`/cms/edit/${data.slug}`, {
+            replace: true,
+            state: {
+              justSaved: true,
+              post: { ...payload, slug: data.slug },
+            },
+          });
         }
       }
 
