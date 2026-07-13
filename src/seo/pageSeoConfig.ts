@@ -1,4 +1,5 @@
 import { getSpecialOfferSeoMeta } from "@/seo/specialOfferSeoConfig";
+import { getPost } from "@/content/blog";
 
 type SiteLocale = "uk" | "en";
 
@@ -129,10 +130,17 @@ const seoConfig: SeoConfig = {
       h1: "Спеціальні пропозиції",
     },
     "/terrace": {
-      title: "Тераса у Львові – Eurohotel",
+      title:
+        "Ресторан з терасою у Львові |ROOF| трирівневий простір на даху Eurohotel",
       description:
-        "Тераса готелю Eurohotel у Львові – ідеальне місце для відпочинку та приємного проведення часу.",
-      h1: "Тераса Eurohotel",
+        "Тераса ресторану в Eurohotel у Львові – ідеальне місце для відпочинку та приємного проведення часу з видом на місто та смачною їжею - Roof Terrace",
+      h1: "Ресторан з терасою у Львові",
+    },
+    "/blog": {
+      title: "Блог готелю Eurohotel у Львові",
+      description:
+        "Новини готелю Eurohotel, поради для гостей та історії з життя готелю у центрі Львова.",
+      h1: "Блог Eurohotel",
     },
   },
   en: {
@@ -244,6 +252,12 @@ const seoConfig: SeoConfig = {
         "Relax on the terrace at Eurohotel in Lviv. Perfect place to enjoy the view and fresh air.",
       h1: "Terrace at Eurohotel Lviv",
     },
+    "/blog": {
+      title: "Eurohotel Lviv Blog",
+      description:
+        "Hotel news, guest tips, and stories from life at Eurohotel in the centre of Lviv.",
+      h1: "Eurohotel Blog",
+    },
   },
 };
 
@@ -260,6 +274,18 @@ export const getSeoMeta = (pathname: string): SeoMeta => {
   if (specialOfferMatch) {
     const offerMeta = getSpecialOfferSeoMeta(locale, specialOfferMatch[1]);
     if (offerMeta) return offerMeta;
+  }
+
+  const blogMatch = normalizedPath.match(/^\/blog\/([^/]+)$/);
+  if (blogMatch) {
+    const post = getPost(blogMatch[1], locale);
+    if (post) {
+      return {
+        title: `${post.title} | Eurohotel`,
+        description: post.description || fallbackSeo.description,
+        h1: post.title,
+      };
+    }
   }
 
   return fallbackSeo;

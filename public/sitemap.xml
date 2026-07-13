@@ -316,5 +316,31 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eurohotel.lviv.ua/terrace"/>
   </url>
 
+  <url>
+    <loc>https://eurohotel.lviv.ua/blog</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://eurohotel.lviv.ua/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eurohotel.lviv.ua/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eurohotel.lviv.ua/blog"/>
+  </url>
+  <url>
+    <loc>https://eurohotel.lviv.ua/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://eurohotel.lviv.ua/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eurohotel.lviv.ua/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eurohotel.lviv.ua/blog"/>
+  </url>
+
+  <url>
+    <loc>https://eurohotel.lviv.ua/blog/vyhidni-u-lvovi</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://eurohotel.lviv.ua/blog/vyhidni-u-lvovi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eurohotel.lviv.ua/en/blog/vyhidni-u-lvovi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eurohotel.lviv.ua/blog/vyhidni-u-lvovi"/>
+  </url>
+  <url>
+    <loc>https://eurohotel.lviv.ua/en/blog/vyhidni-u-lvovi</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://eurohotel.lviv.ua/blog/vyhidni-u-lvovi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eurohotel.lviv.ua/en/blog/vyhidni-u-lvovi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eurohotel.lviv.ua/blog/vyhidni-u-lvovi"/>
+  </url>
+
 </urlset>
 

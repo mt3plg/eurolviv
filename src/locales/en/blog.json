@@ -1,0 +1,9 @@
+{
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Hotel news, guest tips, and stories from life at Eurohotel",
+    "readMore": "Read more",
+    "back": "Back to blog",
+    "empty": "No published posts yet"
+  }
+}

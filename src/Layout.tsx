@@ -22,6 +22,11 @@ import { Agreement } from "@/components/common/Agreement/Agreement";
 import { usePageStore } from "@/store/usePageStorage";
 import { Home } from "./pages/Home";
 import { SpecialOfferLanding } from "./pages/SpecialOfferLanding";
+import { Blog } from "./pages/Blog";
+import { BlogPost } from "./pages/BlogPost";
+import { CmsLogin } from "./pages/cms/CmsLogin";
+import { CmsDashboard } from "./pages/cms/CmsDashboard";
+import { CmsEditor } from "./pages/cms/CmsEditor";
 import { stripLocalePrefix } from "@/utils/localeRouting";
 import { PageSeo } from "@/components/common/Seo/PageSeo";
 export const Layout = () => {
@@ -43,6 +48,7 @@ export const Layout = () => {
     setIsAcceptedAgreement(true);
   };
 
+  const isCmsPage = normalizedPathname.startsWith("/cms");
   const isBookingPage = normalizedPathname === "/booking";
   const isRoomPage = /^\/rooms\/[^/]+$/.test(normalizedPathname);
   const isRoomsPage = normalizedPathname === "/rooms";
@@ -53,7 +59,7 @@ export const Layout = () => {
 
 
   const shouldShowFooter = () => {
-    if (isBookingPage) return false;
+    if (isCmsPage || isBookingPage) return false;
 
     if (isRoomPage) return isLastComfortBlockSection;
 
@@ -61,6 +67,17 @@ export const Layout = () => {
 
     return true;
   };
+
+  if (isCmsPage) {
+    return (
+      <Routes>
+        <Route path="/cms/login" element={<CmsLogin />} />
+        <Route path="/cms" element={<CmsDashboard />} />
+        <Route path="/cms/new" element={<CmsEditor />} />
+        <Route path="/cms/edit/:slug" element={<CmsEditor />} />
+      </Routes>
+    );
+  }
 
   return (
     <>
@@ -124,6 +141,10 @@ export const Layout = () => {
             path="/en/terrace"
             element={<InfinityScrollPage pageKey="terrace" />}
           />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/en/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/en/blog/:slug" element={<BlogPost />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/en/booking" element={<Booking />} />
         </Routes>

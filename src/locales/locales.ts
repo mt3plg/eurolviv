@@ -21,6 +21,7 @@ import enRestaurant from "@/locales/en/restaurant.json";
 import enTerraceState from "@/locales/en/terraceState.json";
 import enValidation from "@/locales/en/validation.json";
 import enOrderModal from "@/locales/en/orderModal.json";
+import enBlog from "@/locales/en/blog.json";
 
 import ukAbout from "@/locales/uk/about.json";
 import ukHome from "@/locales/uk/home.json";
@@ -44,8 +45,7 @@ import ukRestaurant from "@/locales/uk/restaurant.json";
 import ukTerraceState from "@/locales/uk/terraceState.json";
 import ukValidation from "@/locales/uk/validation.json";
 import ukOrderModal from "@/locales/uk/orderModal.json";
-
-
+import ukBlog from "@/locales/uk/blog.json";
 
 export const resources = {
     en: {
@@ -71,6 +71,7 @@ export const resources = {
         ...enOrderModal,
         ...enTerrace,
         ...enTerraceState,
+        ...enBlog,
         ...enValidation
       } 
     },
@@ -97,6 +98,7 @@ export const resources = {
         ...ukSpecialOffersState,
         ...ukTerrace,
         ...ukTerraceState,
+        ...ukBlog,
         ...ukValidation
       }
     } 

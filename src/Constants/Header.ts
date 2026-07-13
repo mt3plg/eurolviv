@@ -4,6 +4,7 @@ export const navLinks = [
   { path: "/conference-service", label: "header.conferenceServices" },
   { path: "/restaurant", label: "header.restaurant" },
   { path: "/special-offers", label: "header.specialOffers" },
+  { path: "/blog", label: "header.blog" },
   { path: "/contacts", label: "header.contacts" },
 ];
 export const navLinksMobile = [
@@ -13,6 +14,7 @@ export const navLinksMobile = [
   { path: "/restaurant", label: "header.restaurant" },
   { path: "/terrace", label: "terrase.header.title2" },
   { path: "/special-offers", label: "header.specialOffers" },
+  { path: "/blog", label: "header.blog" },
   { path: "/contacts", label: "header.contacts" },
 ];
 
