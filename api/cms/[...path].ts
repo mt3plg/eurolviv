@@ -19,13 +19,27 @@ const authConfig = getCmsAuthConfig();
 
 const getRouteParts = (req: VercelRequest): string[] => {
   const raw = req.query.path;
-  if (Array.isArray(raw)) return raw.map(String);
-  if (typeof raw === "string" && raw) return [raw];
+  const segments = Array.isArray(raw)
+    ? raw.map(String)
+    : typeof raw === "string" && raw
+      ? [raw]
+      : (() => {
+          const parts = (req.url || "").split("?")[0].split("/").filter(Boolean);
+          const cmsIndex = parts.indexOf("cms");
+          if (cmsIndex >= 0) return parts.slice(cmsIndex + 1);
+          return [];
+        })();
 
-  const parts = (req.url || "").split("?")[0].split("/").filter(Boolean);
-  const cmsIndex = parts.indexOf("cms");
-  if (cmsIndex >= 0) return parts.slice(cmsIndex + 1);
-  return [];
+  return segments
+    .flatMap((segment) => segment.split("/"))
+    .filter(Boolean)
+    .map((segment) => {
+      try {
+        return decodeURIComponent(segment);
+      } catch {
+        return segment;
+      }
+    });
 };
 
 type GithubContent = {
@@ -65,6 +79,12 @@ const githubFetch = async (pathname: string, init?: RequestInit) => {
   return response;
 };
 
+const encodeGithubPath = (filePath: string) =>
+  filePath
+    .split("/")
+    .map((segment) => encodeURIComponent(segment))
+    .join("/");
+
 const listGithubPosts = async () => {
   const response = await githubFetch(`/contents/content/blog?ref=${BRANCH}`);
   if (response.status === 404) return [];
@@ -89,7 +109,9 @@ const listGithubPosts = async () => {
     const meta = parseFileName(file.name);
     if (!meta) continue;
 
-    const fileRes = await githubFetch(`/contents/${file.path}?ref=${BRANCH}`);
+    const fileRes = await githubFetch(
+      `/contents/${encodeGithubPath(file.path)}?ref=${BRANCH}`
+    );
     if (!fileRes.ok) continue;
     const fileData = (await fileRes.json()) as GithubContent;
     const raw = Buffer.from(fileData.content || "", "base64").toString("utf8");
@@ -115,12 +137,6 @@ const listGithubPosts = async () => {
     return dateB - dateA;
   });
 };
-
-const encodeGithubPath = (filePath: string) =>
-  filePath
-    .split("/")
-    .map((segment) => encodeURIComponent(segment))
-    .join("/");
 
 const readGithubFile = async (filePath: string) => {
   const response = await githubFetch(
@@ -231,14 +247,50 @@ const writePost = async (input: BlogPostInput) => {
 };
 
 const deletePost = async (slug: string) => {
-  await deleteGithubFile(
-    `content/blog/${slug}.uk.md`,
-    `cms: delete blog post ${slug} (uk)`
+  const response = await githubFetch(`/contents/content/blog?ref=${BRANCH}`);
+  if (response.status === 404) return;
+  if (!response.ok) {
+    throw new Error(`GitHub list failed: ${response.status}`);
+  }
+
+  const files = (await response.json()) as GithubContent[];
+  const targets = files.filter(
+    (file) =>
+      file.name === `${slug}.uk.md` ||
+      file.name === `${slug}.en.md` ||
+      file.name === `${encodeURIComponent(slug)}.uk.md` ||
+      file.name === `${encodeURIComponent(slug)}.en.md`
   );
-  await deleteGithubFile(
-    `content/blog/${slug}.en.md`,
-    `cms: delete blog post ${slug} (en)`
-  );
+
+  for (const file of targets) {
+    if (!file.path || !file.sha) continue;
+    const deleteRes = await githubFetch(
+      `/contents/${encodeGithubPath(file.path)}`,
+      {
+        method: "DELETE",
+        body: JSON.stringify({
+          message: `cms: delete blog post ${file.name}`,
+          branch: BRANCH,
+          sha: file.sha,
+        }),
+      }
+    );
+    if (!deleteRes.ok) {
+      const text = await deleteRes.text();
+      throw new Error(`GitHub delete failed: ${deleteRes.status} ${text}`);
+    }
+  }
+
+  if (targets.length === 0) {
+    await deleteGithubFile(
+      `content/blog/${slug}.uk.md`,
+      `cms: delete blog post ${slug} (uk)`
+    );
+    await deleteGithubFile(
+      `content/blog/${slug}.en.md`,
+      `cms: delete blog post ${slug} (en)`
+    );
+  }
 };
 
 const listGithubImages = async () => {
