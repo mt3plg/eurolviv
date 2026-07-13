@@ -21,9 +21,9 @@ export const TerraseHeader = () => {
         </span>
       </h4>
       <div className="flex flex-col items-center">
-        <h1 className="uppercase font-cofo xl:text-[198px] text-[64px] lg:text-[100px] font-normal text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.09em] text-center underline decoration-transparent ">
+        <h2 className="uppercase font-cofo xl:text-[198px] text-[64px] lg:text-[100px] font-normal text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.09em] text-center underline decoration-transparent ">
           {t("terrase.header.title2")}
-        </h1>
+        </h2>
 
         <h4 className="font-cofo lg:text-[18px] text-[14px]  w-[300px] lg:w-[737px] text-white leading-[22.68px] text-center uppercase  lg:mt-[53px] mt-[30px]">
           {t("terrase.header.desc")}

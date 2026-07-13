@@ -23,11 +23,11 @@ export const BarComponent = () => {
             {t("terrase.bar.title2")}
           </span>
         </h4>
-        <h2 className="text-center  uppercase leading-[81%] 2xl:text-[233px] xl:text-[13.52vw] lg:text-[100px] text-[64px] tracking-[-0.09em]">
+        <h3 className="text-center  uppercase leading-[81%] 2xl:text-[233px] xl:text-[13.52vw] lg:text-[100px] text-[64px] tracking-[-0.09em]">
           <Link to={links.cocktailCard} target="_blank">
             {t("terrase.bar.title")}
           </Link>
-        </h2>
+        </h3>
 
         <p
           className={`text-center mt-2 leading-[120%]  uppercase 2xl:text-[1.04vw] xl:text-[1.41vw]  lg:text-[14px] text-[3.20vw]  pt-[22px] lg:pb-[28px]  mx-auto
@@ -59,11 +59,11 @@ export const BarComponent = () => {
               loading="eager"
             />
           </InViewWrapper>
-          <h2 className="text-center text-[16px]  block underline underline-2 xl:py-[20px_27px] 2xl:py-[1.30vw_1.61vw] py-[17px_18px] uppercase text-[#8C331B] 2xl:text-[1.25vw]  xl:text-[1.72vw]  leading-[108%] tracking-[-0.05em] font-cofo-medium">
+          <h3 className="text-center text-[16px]  block underline underline-2 xl:py-[20px_27px] 2xl:py-[1.30vw_1.61vw] py-[17px_18px] uppercase text-[#8C331B] 2xl:text-[1.25vw]  xl:text-[1.72vw]  leading-[108%] tracking-[-0.05em] font-cofo-medium">
             <Link to={links.alcoholCard} target="_blank">
               {t("terrase.bar.alcoholCard")}
             </Link>
-          </h2>
+          </h3>
         </div>
 
         <div className="w-full md:w-[46.49%] border-t-0 md:border-t border-b border-[#B3B3B3] md:border-s md:border-e">
@@ -89,11 +89,11 @@ export const BarComponent = () => {
               </InViewWrapper>
             </div>
           </div>
-          <h2 className="text-center   text-[16px] underline underline-2 xl:py-[20px_27px] 2xl:py-[1.30vw_1.61vw] py-[17px_18px] uppercase text-[#8C331B] 2xl:text-[1.25vw]  xl:text-[1.72vw]  leading-[108%] tracking-[-0.05em] font-cofo-medium">
+          <h3 className="text-center   text-[16px] underline underline-2 xl:py-[20px_27px] 2xl:py-[1.30vw_1.61vw] py-[17px_18px] uppercase text-[#8C331B] 2xl:text-[1.25vw]  xl:text-[1.72vw]  leading-[108%] tracking-[-0.05em] font-cofo-medium">
             <Link to={links.cocktailCard} target="_blank">
               {t("terrase.bar.cocktailCard")}
             </Link>
-          </h2>
+          </h3>
 
           <div className="grid grid-cols-2 2xl:pt-[1.35vw] xl:pt-[17px] pt-[10px] w-full md:w-fit border-t  border-[#B3B3B3]">
             <div className=" md:w-fit xl:px-[17px_8px] 2xl:px-[1.61vw_0.52vw] px-[10px_3.5px]">
@@ -117,14 +117,14 @@ export const BarComponent = () => {
               </InViewWrapper>
             </div>
           </div>
-          <h2
+          <h3
             className="text-center 2xl:py-[1.49vw_1.61vw]   text-[16px] underline underline-2 xl:py-[20px_27px] py-[17px_18px]  xl:text-[1.72vw]
           uppercase text-[#8C331B] 2xl:text-[1.25vw] leading-[108%] tracking-[-0.05em] font-cofo-medium"
           >
             <Link to={links.wineCard} target="_blank">
               {t("terrase.bar.wineCard")}
             </Link>
-          </h2>
+          </h3>
         </div>
       </div>
     </div>

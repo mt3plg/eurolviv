@@ -45,19 +45,19 @@ export const Dishes = ({
               {t(content.heading)}
             </span>
           </h4>
-          <h1
+          <h2
             className={`text-center  uppercase leading-[81%]   tracking-[-0.09em] xl:text-[160px] 2xl:text-[233px] lg:text-[100px] ${
               content.isMenu ? "text-[17.07vw]" : "text-[8.53vw]"
             }`}
           >
             {t(content.title)}
-          </h1>
+          </h2>
           {content.titleTwo && (
-            <h1
+            <h3
               className={`text-center  uppercase leading-[81%] xl:text-[48px]   tracking-[-0.09em] lg:text-[36px] text-[32px] lg:pt-[29px] lg:pb-[19px]`}
             >
               {t(content.titleTwo)}
-            </h1>
+            </h3>
           )}
           <p
             className={`text-center leading-[120%] uppercase  xl:text-[1.25vw] 2xl:text-[1.04vw] lg:text-[14px]
