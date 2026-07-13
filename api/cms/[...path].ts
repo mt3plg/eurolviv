@@ -4,14 +4,14 @@ import {
   getCmsAuthConfig,
   getCmsSessionToken,
   validateCmsLogin,
-} from "../_lib/cms-auth";
+} from "../_lib/cms-auth.js";
 import {
   parseFileName,
   parseFrontmatter,
   serializeMarkdown,
   slugify,
   type BlogPostInput,
-} from "../_lib/blog-markdown";
+} from "../_lib/blog-markdown.js";
 
 const REPO = process.env.CMS_GITHUB_REPO || "mt3plg/eurolviv";
 const BRANCH = process.env.CMS_GITHUB_BRANCH || "main";
