@@ -11,7 +11,7 @@ import {
   serializeMarkdown,
   slugify,
   type BlogPostInput,
-} from "../src/utils/blogMarkdown";
+} from "../../src/utils/blogMarkdown";
 
 const REPO = process.env.CMS_GITHUB_REPO || "mt3plg/eurolviv";
 const BRANCH = process.env.CMS_GITHUB_BRANCH || "main";
