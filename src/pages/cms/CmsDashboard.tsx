@@ -106,7 +106,7 @@ export const CmsDashboard = () => {
                   </div>
                   <div className="flex gap-[8px]">
                     <Link
-                      to={`/cms/edit/${post.slug}`}
+                      to={`/cms/edit/${encodeURIComponent(post.slug)}`}
                       className="border border-[#C7C7C7] px-[12px] py-[8px] text-[12px] uppercase tracking-[0.03em] text-[#252526] hover:border-[#8C331B] hover:text-[#8C331B]"
                     >
                       Редагувати
