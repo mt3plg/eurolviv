@@ -2,7 +2,7 @@
 title: "Weekend in Lviv: 10 places worth visiting"
 date: 2026-07-13T09:53:02.125Z
 description: "A weekend plan for Lviv: 10 places, a 2-day route, restaurants, parks and tips on where to stay near the centre."
-cover: ""
+cover: "/blog-images/1784014413997-lviv_1.jpeg"
 draft: false
 ---
 
