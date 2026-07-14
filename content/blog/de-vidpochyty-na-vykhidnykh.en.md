@@ -2,8 +2,8 @@
 title: "Де відпочити на вихідних?"
 date: 2026-07-13T10:04:53.999Z
 description: "вихідні, відпочинок, Львів"
-cover: ""
-draft: true
+cover: "/blog-images/1784014551847-lviv_2.jpg"
+draft: false
 ---
 
 Де відпочити на вихідних?
